@@ -29,6 +29,7 @@
           <div class="hero-title" id="heroTitle">2026 春季运动会奖牌榜</div>
           <div class="hero-actions">
             <button class="btn ghost" id="exportPoster">导出海报</button>
+            <button class="btn light" id="switchTheme">切换亮色</button>
           </div>
           <div class="time-bar" id="timeBar">
             <span id="lastUpdated">最后更新：--</span>
@@ -55,6 +56,8 @@
             <select id="gradeSelect"></select>
           </div>
 
+          <div class="podium" id="podium"></div>
+
           <div class="table-wrap">
             <div class="table-head">
               <span>排名</span>
@@ -66,6 +69,16 @@
             </div>
             <div class="table-body" id="tableBody"></div>
           </div>
+        </section>
+
+        <section class="events-section">
+          <div class="section-header">
+            <div>
+              <div class="section-title">赛事奖牌分布</div>
+              <div class="section-note">点击榜单可看班级项目贡献；下方展示各赛事总奖牌</div>
+            </div>
+          </div>
+          <div class="events-grid" id="eventsGrid"></div>
         </section>
 
       </main>

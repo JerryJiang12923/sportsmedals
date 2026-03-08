@@ -17,6 +17,17 @@
   --sans: "Oswald", "Noto Sans SC", sans-serif;
 }
 
+body.theme-light {
+  --bg: #edf2f7;
+  --bg-soft: #f7fafc;
+  --card: rgba(255, 255, 255, 0.92);
+  --accent: #b8860b;
+  --text: #1a2433;
+  --muted: rgba(26, 36, 51, 0.62);
+  --line: rgba(26, 36, 51, 0.14);
+  --shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,6 +40,11 @@ body {
     repeating-linear-gradient(120deg, rgba(255, 255, 255, 0.03) 0 2px, transparent 2px 8px);
   color: var(--text);
   min-height: 100vh;
+}
+
+body.theme-light {
+  background: radial-gradient(circle at top, #dde8f5 0%, #edf2f7 58%, #e5ecf5 100%),
+    repeating-linear-gradient(120deg, rgba(26, 36, 51, 0.03) 0 2px, transparent 2px 8px);
 }
 
 html,
@@ -328,6 +344,117 @@ body.poster-mode .modal {
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 6px 10px;
   border-radius: 999px;
+}
+
+.podium {
+  margin-bottom: 18px;
+}
+
+.podium-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.podium-item {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: grid;
+  gap: 6px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+.podium-item.rank-1 {
+  border-color: rgba(214, 179, 90, 0.46);
+  background: linear-gradient(180deg, rgba(214, 179, 90, 0.16), rgba(16, 20, 30, 0.82));
+}
+
+body.theme-light .podium-item.rank-1 {
+  background: linear-gradient(180deg, rgba(214, 179, 90, 0.22), rgba(255, 255, 255, 0.95));
+}
+
+.podium-item.rank-2 {
+  border-color: rgba(183, 196, 215, 0.4);
+}
+
+.podium-item.rank-3 {
+  border-color: rgba(181, 129, 79, 0.42);
+}
+
+.podium-rank {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.podium-name {
+  font-family: var(--serif);
+  font-size: 18px;
+}
+
+.podium-medals {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.podium-points {
+  font-size: 14px;
+  color: var(--accent);
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.event-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--shadow);
+}
+
+.event-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.event-head strong {
+  font-family: var(--serif);
+  font-size: 16px;
+}
+
+.event-head span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.event-stats {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.event-foot {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.empty-card {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px dashed var(--line);
+  color: var(--muted);
+  text-align: center;
 }
 
 

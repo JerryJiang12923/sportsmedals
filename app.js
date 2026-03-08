@@ -28,7 +28,8 @@ const state = {
   data: null,
   view: "classes",
   gradeFilter: null,
-  admin: false
+  admin: false,
+  theme: "dark"
 };
 
 const elements = {
@@ -67,7 +68,8 @@ const elements = {
   exportJson: document.getElementById("exportJson"),
   exportCsv: document.getElementById("exportCsv"),
   exportGuide: document.getElementById("exportGuide"),
-  exportTip: document.getElementById("exportTip")
+  exportTip: document.getElementById("exportTip"),
+  eventsGrid: document.getElementById("eventsGrid")
 };
 
 const dataUrlFromQuery = () => {
@@ -93,6 +95,19 @@ const sumMedals = (records) =>
 
 const calcPoints = (medals, pointsRule) =>
   medals.gold * pointsRule.gold + medals.silver * pointsRule.silver + medals.bronze * pointsRule.bronze;
+
+const applyTheme = (theme) => {
+  state.theme = theme === "light" ? "light" : "dark";
+  document.body.classList.toggle("theme-light", state.theme === "light");
+  if (elements.switchTheme) {
+    elements.switchTheme.textContent = state.theme === "light" ? "切换暗色" : "切换亮色";
+  }
+};
+
+const initTheme = () => {
+  const saved = localStorage.getItem("medalboard_theme");
+  applyTheme(saved === "light" ? "light" : "dark");
+};
 
 const groupBy = (items, keyGetter) => {
   return items.reduce((acc, item) => {
@@ -140,7 +155,30 @@ const updateHero = (data) => {
   elements.heroPrint.src = data.meta.heroUrl;
 };
 
-const renderPodium = () => {};
+const renderPodium = (rows) => {
+  if (!elements.podium) return;
+  const topRows = rows.slice(0, 3);
+  const rankOrder = [2, 1, 3];
+
+  const cards = rankOrder
+    .map((rank) => {
+      const row = topRows.find((item) => item.rank === rank);
+      if (!row) return "";
+      return `
+        <article class="podium-item rank-${rank}" data-name="${row.name}">
+          <div class="podium-rank">第 ${row.rank} 名</div>
+          <div class="podium-name">${row.name}</div>
+          <div class="podium-medals">金 ${row.medals.gold} · 银 ${row.medals.silver} · 铜 ${row.medals.bronze}</div>
+          <div class="podium-points">${row.points} 分</div>
+        </article>
+      `;
+    })
+    .join("");
+
+  elements.podium.innerHTML = cards
+    ? `<div class="podium-grid">${cards}</div>`
+    : '<div class="empty-card">暂无奖牌数据</div>';
+};
 
 const renderTable = (rows) => {
   elements.tableBody.innerHTML = rows
@@ -160,7 +198,47 @@ const renderTable = (rows) => {
     .join("");
 };
 
-const renderEvents = () => {};
+const renderEvents = (data) => {
+  if (!elements.eventsGrid) return;
+
+  const rows = data.events
+    .map((event) => {
+      const records = data.records.filter((record) => record.eventId === event.id);
+      const medals = sumMedals(records);
+      return {
+        event,
+        medals,
+        participants: records.length
+      };
+    })
+    .sort((a, b) => {
+      if (b.medals.gold !== a.medals.gold) return b.medals.gold - a.medals.gold;
+      if (b.medals.silver !== a.medals.silver) return b.medals.silver - a.medals.silver;
+      if (b.medals.bronze !== a.medals.bronze) return b.medals.bronze - a.medals.bronze;
+      return b.participants - a.participants;
+    });
+
+  elements.eventsGrid.innerHTML = rows.length
+    ? rows
+        .map(
+          ({ event, medals, participants }) => `
+        <article class="event-card" data-event-id="${event.id}">
+          <div class="event-head">
+            <strong>${event.name}</strong>
+            <span>${event.category || "赛事"}</span>
+          </div>
+          <div class="event-stats">
+            <span class="medal gold">金 ${medals.gold}</span>
+            <span class="medal silver">银 ${medals.silver}</span>
+            <span class="medal bronze">铜 ${medals.bronze}</span>
+          </div>
+          <div class="event-foot">录入班级：${participants}</div>
+        </article>
+      `
+        )
+        .join("")
+    : '<div class="empty-card">暂无赛事数据</div>';
+};
 
 const render = () => {
   if (!state.data) return;
@@ -208,7 +286,11 @@ const handleViewToggle = (event) => {
   render();
 };
 
-const handleSwitchTheme = () => {};
+const handleSwitchTheme = () => {
+  const nextTheme = state.theme === "light" ? "dark" : "light";
+  applyTheme(nextTheme);
+  localStorage.setItem("medalboard_theme", nextTheme);
+};
 
 const handlePosterExport = () => {
   document.body.classList.add("poster-mode");
@@ -261,9 +343,9 @@ const handleGradeChange = (event) => {
 };
 
 const handleRowClick = (event) => {
-  const row = event.target.closest(".table-row");
-  if (!row) return;
-  const name = row.dataset.name;
+  const clickTarget = event.target.closest(".table-row, .podium-item");
+  if (!clickTarget) return;
+  const name = clickTarget.dataset.name;
   if (!name) return;
   showDetailModal(name);
 };
@@ -472,6 +554,7 @@ const initAdmin = () => {
 
 const init = async () => {
   state.admin = isAdminMode();
+  initTheme();
   await loadData();
   setDefaultGrade();
   renderGradeSelect();
@@ -493,6 +576,7 @@ elements.exportGuide.addEventListener("click", handleExportGuide);
 elements.csvInput.addEventListener("change", handleCsvImport);
 elements.closeAdmin.addEventListener("click", () => elements.adminPanel.classList.remove("active"));
 elements.tableBody.addEventListener("click", handleRowClick);
+elements.podium?.addEventListener("click", handleRowClick);
 elements.closeDetail.addEventListener("click", closeDetailModal);
 elements.detailModal.addEventListener("click", (event) => {
   if (event.target === elements.detailModal) closeDetailModal();
