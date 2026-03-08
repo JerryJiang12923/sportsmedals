@@ -582,6 +582,25 @@ body.theme-light .leaderboard-meta {
 .modal-row span:last-child {
   color: var(--muted);
 }
+body.theme-light .modal {
+  background: rgba(18, 27, 41, 0.32);
+}
+
+body.theme-light .modal-card {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(26, 36, 51, 0.14);
+  color: #132238;
+}
+
+body.theme-light .modal-sub,
+body.theme-light .modal-row span:last-child {
+  color: rgba(19, 34, 56, 0.62);
+}
+
+body.theme-light .modal-row {
+  background: rgba(26, 36, 51, 0.05);
+  border: 1px solid rgba(26, 36, 51, 0.12);
+}
 
 .admin-panel {
   position: fixed;
