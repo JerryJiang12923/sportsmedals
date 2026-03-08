@@ -39,7 +39,6 @@ const elements = {
   heroDate: document.getElementById("heroDate"),
   heroMeta: document.getElementById("heroMeta"),
   schoolLogo: document.getElementById("schoolLogo"),
-  podium: document.getElementById("podium"),
   tableBody: document.getElementById("tableBody"),
   viewNote: document.getElementById("viewNote"),
   gradeFilter: document.getElementById("gradeFilter"),
@@ -68,8 +67,7 @@ const elements = {
   exportJson: document.getElementById("exportJson"),
   exportCsv: document.getElementById("exportCsv"),
   exportGuide: document.getElementById("exportGuide"),
-  exportTip: document.getElementById("exportTip"),
-  eventsGrid: document.getElementById("eventsGrid")
+  exportTip: document.getElementById("exportTip")
 };
 
 const dataUrlFromQuery = () => {
@@ -151,33 +149,9 @@ const updateHero = (data) => {
   elements.heroDate.textContent = data.meta.date;
   elements.heroMeta.querySelector(".hero-subtitle").textContent = data.meta.subtitle;
   elements.schoolLogo.src = data.meta.logoUrl;
+  elements.schoolLogo.style.display = data.meta.logoUrl ? "block" : "none";
   elements.heroMedia.style.backgroundImage = `url('${data.meta.heroUrl}')`;
   elements.heroPrint.src = data.meta.heroUrl;
-};
-
-const renderPodium = (rows) => {
-  if (!elements.podium) return;
-  const topRows = rows.slice(0, 3);
-  const rankOrder = [2, 1, 3];
-
-  const cards = rankOrder
-    .map((rank) => {
-      const row = topRows.find((item) => item.rank === rank);
-      if (!row) return "";
-      return `
-        <article class="podium-item rank-${rank}" data-name="${row.name}">
-          <div class="podium-rank">第 ${row.rank} 名</div>
-          <div class="podium-name">${row.name}</div>
-          <div class="podium-medals">金 ${row.medals.gold} · 银 ${row.medals.silver} · 铜 ${row.medals.bronze}</div>
-          <div class="podium-points">${row.points} 分</div>
-        </article>
-      `;
-    })
-    .join("");
-
-  elements.podium.innerHTML = cards
-    ? `<div class="podium-grid">${cards}</div>`
-    : '<div class="empty-card">暂无奖牌数据</div>';
 };
 
 const renderTable = (rows) => {
@@ -198,57 +172,13 @@ const renderTable = (rows) => {
     .join("");
 };
 
-const renderEvents = (data) => {
-  if (!elements.eventsGrid) return;
-
-  const rows = data.events
-    .map((event) => {
-      const records = data.records.filter((record) => record.eventId === event.id);
-      const medals = sumMedals(records);
-      return {
-        event,
-        medals,
-        participants: records.length
-      };
-    })
-    .sort((a, b) => {
-      if (b.medals.gold !== a.medals.gold) return b.medals.gold - a.medals.gold;
-      if (b.medals.silver !== a.medals.silver) return b.medals.silver - a.medals.silver;
-      if (b.medals.bronze !== a.medals.bronze) return b.medals.bronze - a.medals.bronze;
-      return b.participants - a.participants;
-    });
-
-  elements.eventsGrid.innerHTML = rows.length
-    ? rows
-        .map(
-          ({ event, medals, participants }) => `
-        <article class="event-card" data-event-id="${event.id}">
-          <div class="event-head">
-            <strong>${event.name}</strong>
-            <span>${event.category || "赛事"}</span>
-          </div>
-          <div class="event-stats">
-            <span class="medal gold">金 ${medals.gold}</span>
-            <span class="medal silver">银 ${medals.silver}</span>
-            <span class="medal bronze">铜 ${medals.bronze}</span>
-          </div>
-          <div class="event-foot">录入班级：${participants}</div>
-        </article>
-      `
-        )
-        .join("")
-    : '<div class="empty-card">暂无赛事数据</div>';
-};
-
 const render = () => {
   if (!state.data) return;
   updateHero(state.data);
   const gradeFilter = state.view === "within" ? state.gradeFilter || state.data.records[0]?.grade : null;
   state.gradeFilter = gradeFilter;
   const rows = buildLeaderboard(state.data, state.view, gradeFilter);
-  renderPodium(rows);
   renderTable(rows);
-  renderEvents(state.data);
   if (state.view === "within") {
     elements.viewNote.textContent = gradeFilter ? `当前：${gradeFilter}` : "";
     elements.gradeFilter.style.display = "flex";
@@ -286,7 +216,9 @@ const handleViewToggle = (event) => {
   render();
 };
 
-const handleSwitchTheme = () => {
+const handleSwitchTheme = (event) => {
+  event?.preventDefault?.();
+  event?.stopPropagation?.();
   const nextTheme = state.theme === "light" ? "dark" : "light";
   applyTheme(nextTheme);
   localStorage.setItem("medalboard_theme", nextTheme);
@@ -343,7 +275,7 @@ const handleGradeChange = (event) => {
 };
 
 const handleRowClick = (event) => {
-  const clickTarget = event.target.closest(".table-row, .podium-item");
+  const clickTarget = event.target.closest(".table-row");
   if (!clickTarget) return;
   const name = clickTarget.dataset.name;
   if (!name) return;
@@ -427,6 +359,95 @@ const getEditorData = () => {
   });
 };
 
+const toSafeNumber = (value) => {
+  const normalized = Number(String(value ?? "").replace(/,/g, "").trim());
+  return Number.isFinite(normalized) && normalized >= 0 ? normalized : 0;
+};
+
+const csvEscape = (value) => {
+  const text = String(value ?? "");
+  return /[",\n\r]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
+};
+
+const normalizeHeader = (header = "") =>
+  header
+    .trim()
+    .toLowerCase()
+    .replace(/\ufeff/g, "")
+    .replace(/[\s_-]+/g, "");
+
+const parseCsv = (text) => {
+  const rows = [];
+  let current = "";
+  let row = [];
+  let inQuotes = false;
+
+  const pushCell = () => {
+    row.push(current);
+    current = "";
+  };
+
+  const pushRow = () => {
+    if (row.some((cell) => cell.trim() !== "")) {
+      rows.push(row.map((cell) => cell.trim()));
+    }
+    row = [];
+  };
+
+  for (let i = 0; i < text.length; i += 1) {
+    const char = text[i];
+    if (char === '"') {
+      if (inQuotes && text[i + 1] === '"') {
+        current += '"';
+        i += 1;
+      } else {
+        inQuotes = !inQuotes;
+      }
+      continue;
+    }
+
+    if (!inQuotes && char === ',') {
+      pushCell();
+      continue;
+    }
+
+    if (!inQuotes && (char === "\n" || char === "\r")) {
+      if (char === "\r" && text[i + 1] === "\n") i += 1;
+      pushCell();
+      pushRow();
+      continue;
+    }
+
+    current += char;
+  }
+
+  pushCell();
+  pushRow();
+
+  if (!rows.length) return [];
+
+  const headers = rows[0].map((header) => normalizeHeader(header));
+  return rows.slice(1).map((values) => {
+    const mapped = {};
+    headers.forEach((header, index) => {
+      mapped[header] = (values[index] ?? "").trim();
+    });
+    return mapped;
+  });
+};
+
+const mapCsvRowToEditorRow = (row) => ({
+  eventName: row.eventname || row.event || row.eventtitle || "",
+  category: row.category || row.eventcategory || "",
+  grade: row.grade || row.year || "",
+  className: row.class || row.classname || row.classno || "",
+  gold: toSafeNumber(row.gold),
+  silver: toSafeNumber(row.silver),
+  bronze: toSafeNumber(row.bronze)
+});
+
+const requiredCsvFields = ["eventName", "grade", "className"];
+
 const buildDataFromEditor = () => {
   const editorRows = getEditorData().filter((row) => row.eventName && row.grade && row.className);
   const events = [];
@@ -474,33 +495,21 @@ const handleExportJson = () => {
 };
 
 const handleExportCsv = () => {
-  const rows = getEditorData();
-  const header = "event_name,category,grade,class,gold,silver,bronze";
-  const lines = rows.map(
-    (row) =>
-      `${row.eventName},${row.category},${row.grade},${row.className},${row.gold},${row.silver},${row.bronze}`
+  const rows = getEditorData().filter((row) => row.eventName && row.grade && row.className);
+  const header = ["event_name", "category", "grade", "class", "gold", "silver", "bronze"];
+  const lines = rows.map((row) =>
+    [row.eventName, row.category, row.grade, row.className, row.gold, row.silver, row.bronze]
+      .map((value) => csvEscape(value))
+      .join(",")
   );
-  exportFile([header, ...lines].join("\n"), "medals.csv", "text/csv");
-  elements.exportTip.textContent = "已导出 medals.csv。";
+  const csv = [header.join(","), ...lines].join("\n");
+  exportFile(csv, "medals.csv", "text/csv;charset=utf-8");
+  elements.exportTip.textContent = `已导出 medals.csv（${rows.length} 行）。`;
 };
 
 const handleExportGuide = () => {
   elements.exportTip.textContent =
     "上传说明：登录七牛云控制台 -> 对象存储 -> 你的空间 -> 覆盖上传 medals.json。发布后全校同步。";
-};
-
-const parseCsv = (text) => {
-  const lines = text.split(/\r?\n/).filter((line) => line.trim());
-  const [headerLine, ...dataLines] = lines;
-  const headers = headerLine.split(",").map((header) => header.trim().toLowerCase());
-  return dataLines.map((line) => {
-    const values = line.split(",").map((value) => value.trim());
-    const row = {};
-    headers.forEach((header, index) => {
-      row[header] = values[index];
-    });
-    return row;
-  });
 };
 
 const handleCsvImport = (event) => {
@@ -509,22 +518,22 @@ const handleCsvImport = (event) => {
   const reader = new FileReader();
   reader.onload = () => {
     try {
-      const rows = parseCsv(reader.result);
-      elements.recordEditor.innerHTML = "";
-      rows.forEach((row) =>
-        addEditorRow({
-          eventName: row.event_name,
-          category: row.category,
-          grade: row.grade,
-          className: row.class,
-          gold: row.gold,
-          silver: row.silver,
-          bronze: row.bronze
-        })
+      const parsedRows = parseCsv(String(reader.result || ""));
+      const mappedRows = parsedRows.map(mapCsvRowToEditorRow).filter((row) =>
+        requiredCsvFields.every((field) => row[field])
       );
-      elements.csvStatus.textContent = `已导入 ${rows.length} 行`;
+
+      if (!mappedRows.length) {
+        throw new Error("CSV 缺少必填列或无有效数据");
+      }
+
+      elements.recordEditor.innerHTML = "";
+      mappedRows.forEach((row) => addEditorRow(row));
+      elements.csvStatus.textContent = `已导入 ${mappedRows.length} 行（共解析 ${parsedRows.length} 行）`;
     } catch (error) {
-      elements.csvStatus.textContent = "导入失败，请检查 CSV 格式";
+      elements.csvStatus.textContent = `导入失败：${error.message}`;
+    } finally {
+      event.target.value = "";
     }
   };
   reader.readAsText(file, "utf-8");
@@ -576,7 +585,6 @@ elements.exportGuide.addEventListener("click", handleExportGuide);
 elements.csvInput.addEventListener("change", handleCsvImport);
 elements.closeAdmin.addEventListener("click", () => elements.adminPanel.classList.remove("active"));
 elements.tableBody.addEventListener("click", handleRowClick);
-elements.podium?.addEventListener("click", handleRowClick);
 elements.closeDetail.addEventListener("click", closeDetailModal);
 elements.detailModal.addEventListener("click", (event) => {
   if (event.target === elements.detailModal) closeDetailModal();
