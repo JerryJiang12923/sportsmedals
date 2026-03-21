@@ -5,7 +5,7 @@
     "date": "2026 · 春",
     "logoUrl": "data/icon.jfif",
     "heroUrl": "data/hero.jpg",
-    "updatedAt": "2026/3/21 22:20:45"
+    "updatedAt": "2026/3/21 22:51:41"
   },
   "settings": {
     "points": {
@@ -14,6 +14,55 @@
       "bronze": 1
     }
   },
-  "events": [],
-  "records": []
+  "events": [
+    {
+      "id": "e1",
+      "name": "足球",
+      "category": ""
+    }
+  ],
+  "records": [
+    {
+      "eventId": "e1",
+      "grade": "高二",
+      "className": "高二 1 班",
+      "first": 1,
+      "second": 0,
+      "third": 0,
+      "fourth": 0,
+      "fifth": 0,
+      "sixth": 0,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0
+    },
+    {
+      "eventId": "e1",
+      "grade": "高一",
+      "className": "高一 1 班",
+      "first": 0,
+      "second": 0,
+      "third": 0,
+      "fourth": 1,
+      "fifth": 0,
+      "sixth": 0,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0
+    },
+    {
+      "eventId": "e1",
+      "grade": "高二",
+      "className": "高二 2 班",
+      "first": 0,
+      "second": 1,
+      "third": 0,
+      "fourth": 0,
+      "fifth": 0,
+      "sixth": 0,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0
+    }
+  ]
 }

@@ -1,18 +1,18 @@
 {
   "meta": {
-    "updatedAt": "2026/3/21 19:22:32"
+    "updatedAt": "2026/3/22 00:12:54"
   },
   "matches": {
     "football-1": {
       "scoreA": null,
       "scoreB": null,
-      "status": "scheduled",
-      "note": ""
+      "status": "delayed",
+      "note": "下雨"
     },
     "football-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 1,
+      "status": "final",
       "note": ""
     },
     "football-3": {

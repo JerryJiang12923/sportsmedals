@@ -467,7 +467,6 @@ const renderTable = (rows) => {
     return;
   }
 
-  const allNoMedals = rows.every((row) => (row.medals.gold + row.medals.silver + row.medals.bronze) === 0);
   elements.tableBody.innerHTML = rows
     .map((row, index) => {
       const topClass = row.rank <= 3 ? ` top-${row.rank}` : "";
@@ -483,13 +482,6 @@ const renderTable = (rows) => {
       `;
     })
     .join("");
-
-  if (allNoMedals) {
-    elements.tableBody.insertAdjacentHTML(
-      "afterbegin",
-      '<div class="table-empty table-empty-soft">暂无奖牌，等待比赛结果更新</div>'
-    );
-  }
 };
 
 const render = () => {
@@ -608,6 +600,7 @@ const buildMatchCard = (sportId, match, teamEvent, teamMap = {}, resultMap = {})
   const status = score?.status || "scheduled";
   const note = readMatchNote(score);
   const statusText = status === "delayed" ? "延误" : status === "postponed" ? "推迟" : status === "final" ? "已结束" : "";
+  const statusClass = statusText ? ` status-${status}` : "";
   const isAlert = status === "delayed" || status === "postponed";
   const timeLabel = formatPanguText(`${getDayLabel(match.day)} · ${getSlotLabel(sportId, match.slot, match.day)}`);
   const venueLabel = match.venue ? formatPanguText(`场地 ${match.venue}`) : "";
@@ -640,7 +633,7 @@ const buildMatchCard = (sportId, match, teamEvent, teamMap = {}, resultMap = {})
           <span class="match-time">${timeLabel}</span>
           ${venueLabel ? `<span class="match-venue">${venueLabel}</span>` : ""}
         </div>
-        ${statusText ? `<span class="match-status">${statusText}</span>` : ""}
+        ${statusText ? `<span class="match-status${statusClass}">${statusText}</span>` : ""}
       </div>
       ${teamEvent
         ? `<div class="match-main">
