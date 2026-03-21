@@ -1,0 +1,997 @@
+{
+  "meta": {
+    "updatedAt": "2026/3/21 19:22:32"
+  },
+  "matches": {
+    "football-1": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-3": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-4": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-5": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-6": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-7": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-8": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-9": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-10": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-11": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-12": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-13": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-14": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-15": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-16": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-18": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-1": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-3": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-4": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-5": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-6": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-7": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-8": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-9": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-10": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-11": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-12": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-13": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-14": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-15": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-16": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-17": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-18": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-1-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-2-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-3-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-4-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-5-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-6-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-7-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-8-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-9-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-10-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-11-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-12-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-13-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-1": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-3": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-4": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-5": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-6": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-7": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-8": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-8-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-9": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-10": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-11": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-12": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-13": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-14": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-15": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-16": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-17": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-18": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-19": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-1": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-3": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-1-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-3-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-5": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-6": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-7": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-1-3": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-3-3": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-1-4": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-2-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-3-4": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-4": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-5-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-6-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-7-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-8": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-1": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-3": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-4": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-5": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-6": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-7": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-8": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-9": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-10": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-11": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-1-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-2-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-3-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-4-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-5-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-6-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-7-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-8-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-9-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-10-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-11-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-12": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-13": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-14": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-15": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-16": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-17": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-18": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-singles-19": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-1": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-3": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-4": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-5": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-6": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-7": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-8": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-9": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-10": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-11": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-12": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-13": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-14": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-15": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-16": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-17": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-18": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-18-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-1": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-3": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-4": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-5": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-6": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-7": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-8": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-9": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-10": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-11": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-12": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-13": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-1-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-2-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-3-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-4-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-5-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-6-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-7-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-8-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-9-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-10-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-11-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-skill-m-1": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-skill-f-1": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-skill-1": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "table-tennis-1": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-2-3": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tug-of-war-2-4": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    }
+  }
+}

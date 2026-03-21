@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>春季运动会奖牌榜</title>
+    <link rel="icon" type="image/jpeg" href="data/icon.jfif?v=20260321-1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Han+Serif+SC:wght@600;700&family=Oswald:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260321-4" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero" id="hero">
+        <div class="hero-media" id="heroMedia"></div>
+        <img class="hero-print" id="heroPrint" alt="" />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-top">
+            <img class="logo" id="schoolLogo" alt="校徽" />
+            <div class="hero-meta" id="heroMeta">
+              <span class="hero-subtitle">学校春季运动会</span>
+              <span class="hero-date" id="heroDate">2026 · 春</span>
+            </div>
+          </div>
+          <div class="hero-title" id="heroTitle">2026 春季运动会奖牌榜</div>
+          <div class="hero-actions">
+            <button class="btn ghost" id="exportPoster">导出海报</button>
+            <button class="btn light" id="switchTheme">切换亮色</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="leaderboard">
+          <div class="section-header">
+            <div>
+              <div class="section-title">奖牌榜</div>
+              <div class="section-note" id="viewNote"></div>
+            </div>
+            <div class="view-toggle" id="viewToggle">
+              <button class="toggle active" data-view="classes">全校班级榜</button>
+              <button class="toggle" data-view="within">年级榜</button>
+            </div>
+          </div>
+          <div class="leaderboard-meta" id="leaderboardMeta">
+            <span id="lastUpdated">最后更新：--</span>
+            <span class="time-sep">·</span>
+            <span id="currentTime">当前时间：--</span>
+          </div>
+          <div class="grade-filter" id="gradeFilter">
+            <span>选择年级</span>
+            <select id="gradeSelect"></select>
+          </div>
+
+          <div class="table-wrap">
+            <div class="table-head">
+              <span>排名</span>
+              <span>班级</span>
+              <span>金</span>
+              <span>银</span>
+              <span>铜</span>
+              <span>积分</span>
+            </div>
+            <div class="table-body" id="tableBody"></div>
+          </div>
+        </section>
+
+        <section class="schedule" id="scheduleSection">
+          <div class="section-header">
+            <div>
+              <div class="section-title">赛程</div>
+              <div class="section-note" id="scheduleNote">按项目查看对阵与时间</div>
+            </div>
+            <div class="schedule-meta" id="scheduleMeta">数据更新：--</div>
+          </div>
+          <div class="schedule-tabs" id="scheduleTabs"></div>
+          <div class="schedule-body" id="scheduleBody"></div>
+        </section>
+
+
+      </main>
+      <footer class="site-signature">学生会新媒体工作部 制</footer>
+    </div>
+
+    <div class="modal" id="detailModal">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div>
+            <div class="modal-title" id="detailTitle">项目贡献</div>
+            <div class="modal-sub" id="detailSubtitle"></div>
+          </div>
+          <button class="btn ghost" id="closeDetail">关闭</button>
+        </div>
+        <div class="modal-body" id="detailBody"></div>
+      </div>
+    </div>
+
+    <div class="admin-panel" id="adminPanel">
+      <div class="admin-header">
+        <div class="admin-title">管理模式</div>
+        <button class="btn ghost" id="closeAdmin">关闭</button>
+      </div>
+      <div class="admin-section">
+        <div class="admin-label">基本信息</div>
+        <div class="form-grid">
+          <label>
+            标题
+            <input type="text" id="inputTitle" />
+          </label>
+          <label>
+            届次/日期
+            <input type="text" id="inputDate" />
+          </label>
+          <label>
+            校徽 URL
+            <input type="text" id="inputLogo" />
+          </label>
+          <label>
+            Hero 图 URL
+            <input type="text" id="inputHero" />
+          </label>
+        </div>
+      </div>
+      <div class="admin-section">
+        <div class="admin-label">奖牌录入</div>
+        <div class="table-editor" id="recordEditor"></div>
+        <div class="editor-actions">
+          <button class="btn light" id="addRow">新增行</button>
+          <button class="btn ghost" id="clearRows">清空</button>
+        </div>
+      </div>
+      <div class="admin-section">
+        <div class="admin-label">CSV 导入</div>
+        <input type="file" id="csvInput" accept=".csv" />
+        <div class="admin-tip" id="csvStatus">使用模板: event_name, category, grade, class, first, second, third, fourth, fifth, sixth</div>
+      </div>
+      <div class="admin-section">
+        <div class="admin-label">导出</div>
+        <div class="editor-actions">
+          <button class="btn" id="exportJson">导出 medals JSON</button>
+          <button class="btn ghost" id="exportCsv">导出 CSV</button>
+          <button class="btn light" id="exportGuide">七牛云上传说明</button>
+        </div>
+        <div class="admin-tip" id="exportTip"></div>
+      </div>
+      <div class="admin-section">
+        <div class="admin-label">赛程比分</div>
+        <div class="admin-tip">集体赛可填比分；技巧赛/乒乓等非比分项目请填写备注</div>
+        <div class="scores-toolbar">
+          <label>
+            筛选项目
+            <select id="scoresSportFilter"></select>
+          </label>
+        </div>
+        <div class="scores-editor" id="scoresEditor"></div>
+        <div class="editor-actions">
+          <button class="btn" id="exportScores">导出比分 JSON</button>
+        </div>
+        <div class="admin-tip" id="scoresTip"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="app.js?v=20260321-7"></script>
+  </body>
+</html>

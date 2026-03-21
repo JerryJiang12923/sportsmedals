@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "2026 春季运动会奖牌榜",
+    "subtitle": "学校春季运动会",
+    "date": "2026 · 春",
+    "logoUrl": "data/icon.jfif",
+    "heroUrl": "data/hero.jpg",
+    "updatedAt": "2026/3/21 22:20:45"
+  },
+  "settings": {
+    "points": {
+      "gold": 3,
+      "silver": 2,
+      "bronze": 1
+    }
+  },
+  "events": [],
+  "records": []
+}

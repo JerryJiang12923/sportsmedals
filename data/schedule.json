@@ -1,0 +1,3431 @@
+{
+  "meta": {
+    "title": "赛程",
+    "startDate": "3.23",
+    "dayMap": {
+      "1": "3.23",
+      "2": "3.24",
+      "3": "3.25",
+      "4": "3.26",
+      "5": "3.27",
+      "6": "3.28",
+      "7": "3.29",
+      "8": "3.30"
+    },
+    "timeSlots": {
+      "default": {
+        "G1": "17:00-17:30",
+        "G2": "17:30-18:00",
+        "G3": "18:00-18:30",
+        "G4": "18:30-19:00",
+        "G5": "19:00-19:30",
+        "G6": "19:30-20:00",
+        "G1+2": "17:00-18:00"
+      },
+      "football": {
+        "G1": "17:00-17:30",
+        "G2": "17:30-18:00"
+      },
+      "basketball": {
+        "G1": "17:00-17:30",
+        "G2": "17:30-18:00",
+        "G3": "18:00-18:30",
+        "G1+2": "17:00-18:00"
+      },
+      "volleyball": {
+        "G1": "17:00-17:30",
+        "G2": "17:30-18:00"
+      },
+      "table-tennis": {
+        "G1": "17:00-17:30"
+      },
+      "badminton-mixed": {
+        "G1": "17:00-17:30",
+        "G2": "17:30-18:00",
+        "G3": "18:00-18:30"
+      },
+      "badminton-singles": {
+        "G1": "17:00-17:30",
+        "G2": "17:30-18:00",
+        "G3": "18:00-18:30"
+      },
+      "tennis": {
+        "G1": "17:00-17:20",
+        "G2": "17:20-17:40",
+        "G3": "17:40-18:00",
+        "G4": "18:00-18:20",
+        "G5": "18:20-18:40",
+        "G6": "18:40-19:00"
+      },
+      "tug-of-war": {
+        "G1": "17:00-17:30",
+        "G2": "17:30-18:00"
+      }
+    },
+    "updatedAt": "2026-03-18 20:28"
+  },
+  "sports": [
+    {
+      "id": "football",
+      "name": "足球",
+      "teamEvent": true,
+      "teamMap": {
+        "A": "高一VCE",
+        "B": "高二4",
+        "C": "高一6",
+        "D": "高一5",
+        "E": "高一4",
+        "F": "高二3",
+        "G": "高二2",
+        "H": "高二5",
+        "I": "高一2",
+        "J": "高一3",
+        "K": "高一1",
+        "L": "高二1",
+        "M": "高二6",
+        "N": "高二VCE"
+      },
+      "stages": [
+        {
+          "name": "一",
+          "matches": [
+            {
+              "id": "football-1",
+              "matchNo": "1",
+              "code": "1/AB",
+              "day": 1,
+              "slot": "G1",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "A",
+                  "name": ""
+                },
+                {
+                  "code": "B",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "football-2",
+              "matchNo": "2",
+              "code": "2/CD",
+              "day": 1,
+              "slot": "G1",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "C",
+                  "name": ""
+                },
+                {
+                  "code": "D",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "football-3",
+              "matchNo": "3",
+              "code": "3/EF",
+              "day": 1,
+              "slot": "G1",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "E",
+                  "name": ""
+                },
+                {
+                  "code": "F",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "football-4",
+              "matchNo": "4",
+              "code": "4/GH",
+              "day": 1,
+              "slot": "G2",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "G",
+                  "name": ""
+                },
+                {
+                  "code": "H",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "football-5",
+              "matchNo": "5",
+              "code": "5/IJ",
+              "day": 1,
+              "slot": "G2",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "I",
+                  "name": ""
+                },
+                {
+                  "code": "J",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "football-6",
+              "matchNo": "6",
+              "code": "6/KL",
+              "day": 1,
+              "slot": "G2",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "K",
+                  "name": ""
+                },
+                {
+                  "code": "L",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "football-7",
+              "matchNo": "7",
+              "code": "7/MN",
+              "day": 2,
+              "slot": "G2",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "M",
+                  "name": ""
+                },
+                {
+                  "code": "N",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "二",
+          "matches": [
+            {
+              "id": "football-8",
+              "matchNo": "8",
+              "code": "8/1W6W",
+              "day": 2,
+              "slot": "G1",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "1W",
+                  "name": ""
+                },
+                {
+                  "code": "6W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "football-9",
+              "matchNo": "9",
+              "code": "9/2W5W",
+              "day": 2,
+              "slot": "G1",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "2W",
+                  "name": ""
+                },
+                {
+                  "code": "5W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "football-10",
+              "matchNo": "10",
+              "code": "10/3W4W",
+              "day": 2,
+              "slot": "G2",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "3W",
+                  "name": ""
+                },
+                {
+                  "code": "4W",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "三",
+          "matches": [
+            {
+              "id": "football-11",
+              "matchNo": "11",
+              "code": "11/7W10W",
+              "day": 3,
+              "slot": "G1",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "7W",
+                  "name": ""
+                },
+                {
+                  "code": "10W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "football-12",
+              "matchNo": "12",
+              "code": "12/8W9W",
+              "day": 3,
+              "slot": "G1",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "8W",
+                  "name": ""
+                },
+                {
+                  "code": "9W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "football-13",
+              "matchNo": "13",
+              "code": "13/8L9L",
+              "day": 3,
+              "slot": "G1",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "8L",
+                  "name": ""
+                },
+                {
+                  "code": "9L",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "football-14",
+              "matchNo": "14",
+              "code": "14/9L10L",
+              "day": 4,
+              "slot": "G1",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "9L",
+                  "name": ""
+                },
+                {
+                  "code": "10L",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "football-15",
+              "matchNo": "15",
+              "code": "15/8L10L",
+              "day": 5,
+              "slot": "",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "8L",
+                  "name": ""
+                },
+                {
+                  "code": "10L",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "四",
+          "matches": [
+            {
+              "id": "football-16",
+              "matchNo": "16",
+              "code": "16/11L12L",
+              "day": 4,
+              "slot": "G1",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "11L",
+                  "name": ""
+                },
+                {
+                  "code": "12L",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "football-18",
+              "matchNo": "18",
+              "code": "18/11W12W",
+              "day": 5,
+              "slot": "G1",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "11W",
+                  "name": ""
+                },
+                {
+                  "code": "12W",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "football-skill",
+      "name": "足球技巧赛",
+      "teamEvent": false,
+      "teamMap": {},
+      "stages": [
+        {
+          "name": "一",
+          "matches": [
+            {
+              "id": "football-skill-1",
+              "matchNo": "技1",
+              "code": "技巧赛",
+              "day": 2,
+              "slot": "G2",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "",
+                  "name": "待定"
+                },
+                {
+                  "code": "",
+                  "name": "待定"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "basketball-male",
+      "name": "篮球男篮",
+      "teamEvent": true,
+      "teamMap": {
+        "A": "高二4",
+        "B": "高二6",
+        "C": "高一1",
+        "D": "高一6",
+        "E": "高一3",
+        "F": "高一2",
+        "G": "高一VCE",
+        "H": "高一5",
+        "I": "高一4",
+        "J": "高二1",
+        "K": "高二2",
+        "L": "高二3",
+        "M": "高二5",
+        "N": "高二VCE"
+      },
+      "stages": [
+        {
+          "name": "一",
+          "matches": [
+            {
+              "id": "basketball-1",
+              "matchNo": "1",
+              "code": "1/AB",
+              "day": 1,
+              "slot": "G1",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "A",
+                  "name": "高二4"
+                },
+                {
+                  "code": "B",
+                  "name": "高二6"
+                }
+              ]
+            },
+            {
+              "id": "basketball-2",
+              "matchNo": "2",
+              "code": "2/CD",
+              "day": 1,
+              "slot": "G1",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "C",
+                  "name": "高一1"
+                },
+                {
+                  "code": "D",
+                  "name": "高一6"
+                }
+              ]
+            },
+            {
+              "id": "basketball-3",
+              "matchNo": "3",
+              "code": "3/EF",
+              "day": 1,
+              "slot": "G1",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "E",
+                  "name": "高一3"
+                },
+                {
+                  "code": "F",
+                  "name": "高一2"
+                }
+              ]
+            },
+            {
+              "id": "basketball-4",
+              "matchNo": "4",
+              "code": "4/GH",
+              "day": 1,
+              "slot": "G1",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "G",
+                  "name": "高一VCE"
+                },
+                {
+                  "code": "H",
+                  "name": "高一5"
+                }
+              ]
+            },
+            {
+              "id": "basketball-5",
+              "matchNo": "5",
+              "code": "5/IJ",
+              "day": 1,
+              "slot": "G1",
+              "venue": "A5",
+              "teams": [
+                {
+                  "code": "I",
+                  "name": "高一4"
+                },
+                {
+                  "code": "J",
+                  "name": "高二1"
+                }
+              ]
+            },
+            {
+              "id": "basketball-6",
+              "matchNo": "6",
+              "code": "6/KL",
+              "day": 1,
+              "slot": "G2",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "K",
+                  "name": "高二2"
+                },
+                {
+                  "code": "L",
+                  "name": "高二3"
+                }
+              ]
+            },
+            {
+              "id": "basketball-7",
+              "matchNo": "7",
+              "code": "7/MN",
+              "day": 1,
+              "slot": "G2",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "M",
+                  "name": "高二5"
+                },
+                {
+                  "code": "N",
+                  "name": "高二VCE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "二",
+          "matches": [
+            {
+              "id": "basketball-8",
+              "matchNo": "8",
+              "code": "8/1W6W",
+              "day": 2,
+              "slot": "G1",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "1W",
+                  "name": ""
+                },
+                {
+                  "code": "6W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "basketball-9",
+              "matchNo": "9",
+              "code": "9/2W5W",
+              "day": 2,
+              "slot": "G1",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "2W",
+                  "name": ""
+                },
+                {
+                  "code": "5W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "basketball-10",
+              "matchNo": "10",
+              "code": "10/3W4W",
+              "day": 2,
+              "slot": "G1",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "3W",
+                  "name": ""
+                },
+                {
+                  "code": "4W",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "三",
+          "matches": [
+            {
+              "id": "basketball-11",
+              "matchNo": "11",
+              "code": "11/7W10W",
+              "day": 3,
+              "slot": "G1",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "7W",
+                  "name": ""
+                },
+                {
+                  "code": "10W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "basketball-12",
+              "matchNo": "12",
+              "code": "12/8W9W",
+              "day": 3,
+              "slot": "G1",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "8W",
+                  "name": ""
+                },
+                {
+                  "code": "9W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "basketball-13",
+              "matchNo": "13",
+              "code": "13/8L9L",
+              "day": 3,
+              "slot": "G1",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "8L",
+                  "name": ""
+                },
+                {
+                  "code": "9L",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "basketball-14",
+              "matchNo": "14",
+              "code": "14/9L10L",
+              "day": 3,
+              "slot": "G2",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "9L",
+                  "name": ""
+                },
+                {
+                  "code": "10L",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "basketball-15",
+              "matchNo": "15",
+              "code": "15/8L10L",
+              "day": 3,
+              "slot": "G3",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "8L",
+                  "name": ""
+                },
+                {
+                  "code": "10L",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "四",
+          "matches": [
+            {
+              "id": "basketball-16",
+              "matchNo": "16",
+              "code": "16/11L12L",
+              "day": 4,
+              "slot": "G1",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "11L",
+                  "name": ""
+                },
+                {
+                  "code": "12L",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "basketball-17",
+              "matchNo": "17",
+              "code": "17/131415U1*131415U2",
+              "day": 4,
+              "slot": "G1",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "131415U1",
+                  "name": ""
+                },
+                {
+                  "code": "131415U2",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "basketball-18",
+              "matchNo": "18",
+              "code": "18/11W12W",
+              "day": 5,
+              "slot": "G1",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "11W",
+                  "name": ""
+                },
+                {
+                  "code": "12W",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "basketball-female",
+      "name": "篮球女篮",
+      "teamEvent": true,
+      "teamMap": {
+        "A": "高二VCE",
+        "B": "高二1",
+        "C": "高二2",
+        "D": "高二3",
+        "E": "高二4",
+        "F": "高一4",
+        "G": "高一6",
+        "H": "高二6",
+        "I": "高一VCE"
+      },
+      "stages": [
+        {
+          "name": "一",
+          "matches": [
+            {
+              "id": "basketball-1-2",
+              "matchNo": "1",
+              "code": "1/AB",
+              "day": 1,
+              "slot": "G2",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "A",
+                  "name": "高二VCE"
+                },
+                {
+                  "code": "B",
+                  "name": "高二1"
+                }
+              ]
+            },
+            {
+              "id": "basketball-2-2",
+              "matchNo": "2",
+              "code": "2/CD",
+              "day": 1,
+              "slot": "G2",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "C",
+                  "name": "高二2"
+                },
+                {
+                  "code": "D",
+                  "name": "高二3"
+                }
+              ]
+            },
+            {
+              "id": "basketball-3-2",
+              "matchNo": "3",
+              "code": "3/EF",
+              "day": 2,
+              "slot": "G2",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "E",
+                  "name": "高二4"
+                },
+                {
+                  "code": "F",
+                  "name": "高一4"
+                }
+              ]
+            },
+            {
+              "id": "basketball-4-2",
+              "matchNo": "4",
+              "code": "4/GH",
+              "day": 2,
+              "slot": "G1",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "G",
+                  "name": "高一6"
+                },
+                {
+                  "code": "H",
+                  "name": "高二6"
+                }
+              ]
+            },
+            {
+              "id": "basketball-5-2",
+              "matchNo": "5",
+              "code": "5/GI",
+              "day": 2,
+              "slot": "G2",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "G",
+                  "name": "高一6"
+                },
+                {
+                  "code": "I",
+                  "name": "高一VCE"
+                }
+              ]
+            },
+            {
+              "id": "basketball-6-2",
+              "matchNo": "6",
+              "code": "6/HI",
+              "day": 2,
+              "slot": "G3",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "H",
+                  "name": "高二6"
+                },
+                {
+                  "code": "I",
+                  "name": "高一VCE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "二",
+          "matches": [
+            {
+              "id": "basketball-7-2",
+              "matchNo": "7",
+              "code": "7/1W456U1",
+              "day": 3,
+              "slot": "G2",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "1W456U1",
+                  "name": ""
+                },
+                {
+                  "code": "",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "basketball-8-2",
+              "matchNo": "8",
+              "code": "8/2W3W",
+              "day": 3,
+              "slot": "G2",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "2W",
+                  "name": ""
+                },
+                {
+                  "code": "3W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "basketball-9-2",
+              "matchNo": "9",
+              "code": "9/1L456U2",
+              "day": 3,
+              "slot": "G2",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "1L456U2",
+                  "name": ""
+                },
+                {
+                  "code": "",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "basketball-10-2",
+              "matchNo": "10",
+              "code": "10/2L3L",
+              "day": 3,
+              "slot": "G3",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "2L",
+                  "name": ""
+                },
+                {
+                  "code": "3L",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "三",
+          "matches": [
+            {
+              "id": "basketball-11-2",
+              "matchNo": "11",
+              "code": "11/7L8L",
+              "day": 4,
+              "slot": "G2",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "7L",
+                  "name": ""
+                },
+                {
+                  "code": "8L",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "basketball-12-2",
+              "matchNo": "12",
+              "code": "12/9W10W",
+              "day": 4,
+              "slot": "G2",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "9W",
+                  "name": ""
+                },
+                {
+                  "code": "10W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "basketball-13-2",
+              "matchNo": "13",
+              "code": "13/7W8W",
+              "day": 5,
+              "slot": "G2",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "7W",
+                  "name": ""
+                },
+                {
+                  "code": "8W",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "basketball-skill",
+      "name": "篮球技巧赛",
+      "teamEvent": false,
+      "teamMap": {},
+      "stages": [
+        {
+          "name": "男",
+          "matches": [
+            {
+              "id": "basketball-skill-m-1",
+              "matchNo": "技男1",
+              "code": "技巧赛",
+              "day": 3,
+              "slot": "G1+2",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "",
+                  "name": "待定"
+                },
+                {
+                  "code": "",
+                  "name": "待定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "女",
+          "matches": [
+            {
+              "id": "basketball-skill-f-1",
+              "matchNo": "技女1",
+              "code": "技巧赛",
+              "day": 4,
+              "slot": "G1",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "",
+                  "name": "待定"
+                },
+                {
+                  "code": "",
+                  "name": "待定"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "volleyball",
+      "name": "排球",
+      "teamEvent": true,
+      "teamMap": {
+        "A": "高二3",
+        "B": "高一2",
+        "C": "高二2",
+        "D": "高二5",
+        "E": "高一1",
+        "F": "高二4",
+        "G": "高一4",
+        "H": "高一VCE",
+        "I": "高一6",
+        "J": "高二1",
+        "K": "高一5",
+        "L": "高一3",
+        "M": "高二6"
+      },
+      "stages": [
+        {
+          "name": "一",
+          "matches": [
+            {
+              "id": "volleyball-1",
+              "matchNo": "1",
+              "code": "1/AB",
+              "day": 2,
+              "slot": "G1",
+              "venue": "C1",
+              "teams": [
+                {
+                  "code": "A",
+                  "name": "高二3"
+                },
+                {
+                  "code": "B",
+                  "name": "高一2"
+                }
+              ]
+            },
+            {
+              "id": "volleyball-2",
+              "matchNo": "2",
+              "code": "2/CD",
+              "day": 2,
+              "slot": "G1",
+              "venue": "C2",
+              "teams": [
+                {
+                  "code": "C",
+                  "name": "高二2"
+                },
+                {
+                  "code": "D",
+                  "name": "高二5"
+                }
+              ]
+            },
+            {
+              "id": "volleyball-3",
+              "matchNo": "3",
+              "code": "3/EF",
+              "day": 2,
+              "slot": "G2",
+              "venue": "C1",
+              "teams": [
+                {
+                  "code": "E",
+                  "name": ""
+                },
+                {
+                  "code": "F",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "volleyball-4",
+              "matchNo": "4",
+              "code": "4/GH",
+              "day": 2,
+              "slot": "G2",
+              "venue": "C2",
+              "teams": [
+                {
+                  "code": "G",
+                  "name": "高一4"
+                },
+                {
+                  "code": "H",
+                  "name": "高一VCE"
+                }
+              ]
+            },
+            {
+              "id": "volleyball-5",
+              "matchNo": "5",
+              "code": "5/IJ",
+              "day": 3,
+              "slot": "G1",
+              "venue": "C1",
+              "teams": [
+                {
+                  "code": "I",
+                  "name": ""
+                },
+                {
+                  "code": "J",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "volleyball-6",
+              "matchNo": "6",
+              "code": "6/KL",
+              "day": 3,
+              "slot": "G1",
+              "venue": "C2",
+              "teams": [
+                {
+                  "code": "K",
+                  "name": ""
+                },
+                {
+                  "code": "L",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "volleyball-7",
+              "matchNo": "7",
+              "code": "7/KM",
+              "day": 3,
+              "slot": "G2",
+              "venue": "C1",
+              "teams": [
+                {
+                  "code": "K",
+                  "name": "高一5"
+                },
+                {
+                  "code": "M",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "volleyball-8",
+              "matchNo": "8",
+              "code": "8/LM",
+              "day": 4,
+              "slot": "G1",
+              "venue": "C1",
+              "teams": [
+                {
+                  "code": "L",
+                  "name": "高一3"
+                },
+                {
+                  "code": "M",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "二",
+          "matches": [
+            {
+              "id": "volleyball-8-2",
+              "matchNo": "8",
+              "code": "8/1W2W",
+              "day": 3,
+              "slot": "G2",
+              "venue": "C2",
+              "teams": [
+                {
+                  "code": "1W",
+                  "name": ""
+                },
+                {
+                  "code": "2W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "volleyball-9",
+              "matchNo": "9",
+              "code": "9/3W678U1",
+              "day": 4,
+              "slot": "G2",
+              "venue": "C1",
+              "teams": [
+                {
+                  "code": "3W678U1",
+                  "name": ""
+                },
+                {
+                  "code": "",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "volleyball-10",
+              "matchNo": "10",
+              "code": "10/4W5W",
+              "day": 4,
+              "slot": "G1",
+              "venue": "C2",
+              "teams": [
+                {
+                  "code": "4W",
+                  "name": ""
+                },
+                {
+                  "code": "5W",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "三",
+          "matches": [
+            {
+              "id": "volleyball-11",
+              "matchNo": "11",
+              "code": "11/8W9W",
+              "day": 6,
+              "slot": "G1",
+              "venue": "C1",
+              "teams": [
+                {
+                  "code": "8W",
+                  "name": ""
+                },
+                {
+                  "code": "9W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "volleyball-12",
+              "matchNo": "12",
+              "code": "12/9W10W",
+              "day": 6,
+              "slot": "G2",
+              "venue": "C1",
+              "teams": [
+                {
+                  "code": "9W",
+                  "name": ""
+                },
+                {
+                  "code": "10W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "volleyball-13",
+              "matchNo": "13",
+              "code": "13/8W10W",
+              "day": 7,
+              "slot": "G1",
+              "venue": "C1",
+              "teams": [
+                {
+                  "code": "8W",
+                  "name": ""
+                },
+                {
+                  "code": "10W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "volleyball-14",
+              "matchNo": "14",
+              "code": "14/8L9L",
+              "day": 6,
+              "slot": "G1",
+              "venue": "C2",
+              "teams": [
+                {
+                  "code": "8L",
+                  "name": ""
+                },
+                {
+                  "code": "9L",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "volleyball-15",
+              "matchNo": "15",
+              "code": "15/9L10L",
+              "day": 6,
+              "slot": "G2",
+              "venue": "C2",
+              "teams": [
+                {
+                  "code": "9L",
+                  "name": ""
+                },
+                {
+                  "code": "10L",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "volleyball-16",
+              "matchNo": "16",
+              "code": "16/8L10L",
+              "day": 7,
+              "slot": "G1",
+              "venue": "C2",
+              "teams": [
+                {
+                  "code": "8L",
+                  "name": ""
+                },
+                {
+                  "code": "10L",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "四",
+          "matches": [
+            {
+              "id": "volleyball-17",
+              "matchNo": "17",
+              "code": "17/111213U3*141516U1",
+              "day": 7,
+              "slot": "G2",
+              "venue": "C1",
+              "teams": [
+                {
+                  "code": "111213U3",
+                  "name": ""
+                },
+                {
+                  "code": "141516U1",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "volleyball-18",
+              "matchNo": "18",
+              "code": "18/141516U2*141516U3",
+              "day": 7,
+              "slot": "G2",
+              "venue": "C2",
+              "teams": [
+                {
+                  "code": "141516U2",
+                  "name": ""
+                },
+                {
+                  "code": "141516U3",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "volleyball-19",
+              "matchNo": "19",
+              "code": "19/111213U1*111213U2",
+              "day": 8,
+              "slot": "G1",
+              "venue": "C1",
+              "teams": [
+                {
+                  "code": "111213U1",
+                  "name": ""
+                },
+                {
+                  "code": "111213U2",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "table-tennis",
+      "name": "乒乓球",
+      "teamEvent": false,
+      "teamMap": {},
+      "stages": [
+        {
+          "name": "一",
+          "matches": [
+            {
+              "id": "table-tennis-1",
+              "matchNo": "1",
+              "code": "旋转推挡",
+              "day": 5,
+              "slot": "G1",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "",
+                  "name": "待定"
+                },
+                {
+                  "code": "",
+                  "name": "待定"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "badminton-mixed",
+      "name": "羽毛球混双",
+      "teamEvent": false,
+      "teamMap": {
+        "A": "高一1组1",
+        "B": "高二5",
+        "C": "高一3组1",
+        "D": "高二4组2",
+        "E": "高二4组1",
+        "F": "高二6组1",
+        "G": "高一1组2",
+        "H": "高一3组2",
+        "I": "高一4组2",
+        "J": "高二VCE",
+        "K": "高一5",
+        "L": "高二6组2",
+        "M": "高一6",
+        "N": "高一VCE组1",
+        "O": "高一VCE组2",
+        "P": "高一4组1"
+      },
+      "stages": [
+        {
+          "name": "一",
+          "matches": [
+            {
+              "id": "badminton-mixed-1",
+              "matchNo": "1",
+              "code": "1/AB",
+              "day": 1,
+              "slot": "G1",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "A",
+                  "name": "高一1组1"
+                },
+                {
+                  "code": "B",
+                  "name": "高二5"
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-2",
+              "matchNo": "2",
+              "code": "2/CD",
+              "day": 1,
+              "slot": "G1",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "C",
+                  "name": "高一3组1"
+                },
+                {
+                  "code": "D",
+                  "name": "高二4组2"
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-3",
+              "matchNo": "3",
+              "code": "3/EF",
+              "day": 1,
+              "slot": "G1",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "E",
+                  "name": "高二4组1"
+                },
+                {
+                  "code": "F",
+                  "name": "高二6组1"
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-4",
+              "matchNo": "4",
+              "code": "4/GH",
+              "day": 1,
+              "slot": "G2",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "G",
+                  "name": "高一1组2"
+                },
+                {
+                  "code": "H",
+                  "name": "高一3组2"
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-5",
+              "matchNo": "5",
+              "code": "5/IJ",
+              "day": 1,
+              "slot": "G2",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "I",
+                  "name": "高一4组2"
+                },
+                {
+                  "code": "J",
+                  "name": "高二VCE"
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-6",
+              "matchNo": "6",
+              "code": "6/KL",
+              "day": 1,
+              "slot": "G2",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "K",
+                  "name": "高一5"
+                },
+                {
+                  "code": "L",
+                  "name": "高二6组2"
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-7",
+              "matchNo": "7",
+              "code": "7/MN",
+              "day": 1,
+              "slot": "G1",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "M",
+                  "name": "高一6"
+                },
+                {
+                  "code": "N",
+                  "name": "高一VCE组1"
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-8",
+              "matchNo": "8",
+              "code": "8/OP",
+              "day": 1,
+              "slot": "G2",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "O",
+                  "name": "高一VCE组2"
+                },
+                {
+                  "code": "P",
+                  "name": "高一4组1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "二",
+          "matches": [
+            {
+              "id": "badminton-mixed-9",
+              "matchNo": "9",
+              "code": "9/1W6W",
+              "day": 1,
+              "slot": "G3",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "1W",
+                  "name": ""
+                },
+                {
+                  "code": "6W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-10",
+              "matchNo": "10",
+              "code": "10/2W5W",
+              "day": 1,
+              "slot": "G3",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "2W",
+                  "name": ""
+                },
+                {
+                  "code": "5W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-11",
+              "matchNo": "11",
+              "code": "11/3W4W",
+              "day": 1,
+              "slot": "G3",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "3W",
+                  "name": ""
+                },
+                {
+                  "code": "4W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-12",
+              "matchNo": "12",
+              "code": "12/7W8W",
+              "day": 1,
+              "slot": "G3",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "7W",
+                  "name": ""
+                },
+                {
+                  "code": "8W",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "三",
+          "matches": [
+            {
+              "id": "badminton-mixed-13",
+              "matchNo": "13",
+              "code": "13/9W12W",
+              "day": 2,
+              "slot": "G1",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "9W",
+                  "name": ""
+                },
+                {
+                  "code": "12W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-14",
+              "matchNo": "14",
+              "code": "14/10W11W",
+              "day": 2,
+              "slot": "G1",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "10W",
+                  "name": ""
+                },
+                {
+                  "code": "11W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-15",
+              "matchNo": "15",
+              "code": "15/9L12L",
+              "day": 2,
+              "slot": "G1",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "9L",
+                  "name": ""
+                },
+                {
+                  "code": "12L",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-16",
+              "matchNo": "16",
+              "code": "16/10L11L",
+              "day": 2,
+              "slot": "G1",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "10L",
+                  "name": ""
+                },
+                {
+                  "code": "11L",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "四",
+          "matches": [
+            {
+              "id": "badminton-mixed-17",
+              "matchNo": "17",
+              "code": "17/15W16W",
+              "day": 2,
+              "slot": "G2",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "15W",
+                  "name": ""
+                },
+                {
+                  "code": "16W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-18",
+              "matchNo": "18",
+              "code": "18/13L14L",
+              "day": 2,
+              "slot": "G2",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "13L",
+                  "name": ""
+                },
+                {
+                  "code": "14L",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-18-2",
+              "matchNo": "18",
+              "code": "18/13W14W",
+              "day": 5,
+              "slot": "G2",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "13W",
+                  "name": ""
+                },
+                {
+                  "code": "14W",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "badminton-singles-female",
+      "name": "羽毛球女单",
+      "teamEvent": false,
+      "teamMap": {},
+      "stages": [
+        {
+          "name": "一",
+          "matches": [
+            {
+              "id": "badminton-singles-1",
+              "matchNo": "1",
+              "code": "1/AB",
+              "day": 2,
+              "slot": "G2",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "A",
+                  "name": "高二4"
+                },
+                {
+                  "code": "B",
+                  "name": "高二6"
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-2",
+              "matchNo": "2",
+              "code": "2/CD",
+              "day": 2,
+              "slot": "G2",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "C",
+                  "name": "高一5"
+                },
+                {
+                  "code": "D",
+                  "name": "高一4"
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-3",
+              "matchNo": "3",
+              "code": "3/EF",
+              "day": 2,
+              "slot": "G3",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "E",
+                  "name": "高一2"
+                },
+                {
+                  "code": "F",
+                  "name": "高二5"
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-4",
+              "matchNo": "4",
+              "code": "4/GH",
+              "day": 2,
+              "slot": "G3",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "G",
+                  "name": "高二VCE"
+                },
+                {
+                  "code": "H",
+                  "name": "高一1"
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-5",
+              "matchNo": "5",
+              "code": "5/IJ",
+              "day": 2,
+              "slot": "G3",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "I",
+                  "name": "高一6"
+                },
+                {
+                  "code": "J",
+                  "name": "高一VCE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "二",
+          "matches": [
+            {
+              "id": "badminton-singles-6",
+              "matchNo": "6",
+              "code": "6/1W2W",
+              "day": 2,
+              "slot": "G3",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "1W",
+                  "name": ""
+                },
+                {
+                  "code": "2W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-7",
+              "matchNo": "7",
+              "code": "7/3W4W",
+              "day": 3,
+              "slot": "G1",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "3W",
+                  "name": ""
+                },
+                {
+                  "code": "4W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-8",
+              "matchNo": "8",
+              "code": "8/4W5W",
+              "day": 3,
+              "slot": "G2",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "4W",
+                  "name": ""
+                },
+                {
+                  "code": "5W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-9",
+              "matchNo": "9",
+              "code": "9/3W5W",
+              "day": 3,
+              "slot": "G3",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "3W",
+                  "name": ""
+                },
+                {
+                  "code": "5W",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "三",
+          "matches": [
+            {
+              "id": "badminton-singles-10",
+              "matchNo": "10",
+              "code": "10/6W789U1",
+              "day": 5,
+              "slot": null,
+              "venue": null,
+              "teams": [
+                {
+                  "code": "6W789U1",
+                  "name": ""
+                },
+                {
+                  "code": "",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-11",
+              "matchNo": "11",
+              "code": "11/6L*789U2",
+              "day": 5,
+              "slot": null,
+              "venue": null,
+              "teams": [
+                {
+                  "code": "6L",
+                  "name": ""
+                },
+                {
+                  "code": "789U2",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "badminton-singles-male",
+      "name": "羽毛球男单",
+      "teamEvent": false,
+      "teamMap": {},
+      "stages": [
+        {
+          "name": "一",
+          "matches": [
+            {
+              "id": "badminton-singles-1-2",
+              "matchNo": "1",
+              "code": "1/AB",
+              "day": 3,
+              "slot": "G3",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "A",
+                  "name": "高二3"
+                },
+                {
+                  "code": "B",
+                  "name": "高一1"
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-2-2",
+              "matchNo": "2",
+              "code": "2/CD",
+              "day": 3,
+              "slot": "G3",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "C",
+                  "name": "高一5"
+                },
+                {
+                  "code": "D",
+                  "name": "高二2"
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-3-2",
+              "matchNo": "3",
+              "code": "3/EF",
+              "day": 3,
+              "slot": "G3",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "E",
+                  "name": "高一4"
+                },
+                {
+                  "code": "F",
+                  "name": "高二1"
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-4-2",
+              "matchNo": "4",
+              "code": "4/GH",
+              "day": 3,
+              "slot": "G3",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "G",
+                  "name": "高二6"
+                },
+                {
+                  "code": "H",
+                  "name": "高一6"
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-5-2",
+              "matchNo": "5",
+              "code": "5/IJ",
+              "day": 4,
+              "slot": "G1",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "I",
+                  "name": "高二5"
+                },
+                {
+                  "code": "J",
+                  "name": "高一3"
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-6-2",
+              "matchNo": "6",
+              "code": "6/IK",
+              "day": 4,
+              "slot": "G2",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "I",
+                  "name": "高二5"
+                },
+                {
+                  "code": "K",
+                  "name": "高一VCE"
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-7-2",
+              "matchNo": "7",
+              "code": "7/JK",
+              "day": 4,
+              "slot": "G3",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "J",
+                  "name": "高一3"
+                },
+                {
+                  "code": "K",
+                  "name": "高一VCE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "二",
+          "matches": [
+            {
+              "id": "badminton-singles-8-2",
+              "matchNo": "8",
+              "code": "8/1W567U1",
+              "day": 6,
+              "slot": "G1",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "1W567U1",
+                  "name": ""
+                },
+                {
+                  "code": "",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-9-2",
+              "matchNo": "9",
+              "code": "9/2W567U2",
+              "day": 6,
+              "slot": "G1",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "2W567U2",
+                  "name": ""
+                },
+                {
+                  "code": "",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-10-2",
+              "matchNo": "10",
+              "code": "10/3W4W",
+              "day": 4,
+              "slot": "G1",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "3W",
+                  "name": ""
+                },
+                {
+                  "code": "4W",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "三",
+          "matches": [
+            {
+              "id": "badminton-singles-11-2",
+              "matchNo": "11",
+              "code": "11/8W9W",
+              "day": 6,
+              "slot": "G2",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "8W",
+                  "name": ""
+                },
+                {
+                  "code": "9W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-12",
+              "matchNo": "12",
+              "code": "12/8L9L",
+              "day": 6,
+              "slot": "G2",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "8L",
+                  "name": ""
+                },
+                {
+                  "code": "9L",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-13",
+              "matchNo": "13",
+              "code": "13/8W10W",
+              "day": 6,
+              "slot": "G3",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "8W",
+                  "name": ""
+                },
+                {
+                  "code": "10W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-14",
+              "matchNo": "14",
+              "code": "14/8L10L",
+              "day": 6,
+              "slot": "G3",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "8L",
+                  "name": ""
+                },
+                {
+                  "code": "10L",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-15",
+              "matchNo": "15",
+              "code": "15/9W10W",
+              "day": 7,
+              "slot": "G1",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "9W",
+                  "name": ""
+                },
+                {
+                  "code": "10W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-16",
+              "matchNo": "16",
+              "code": "16/9L10L",
+              "day": 7,
+              "slot": "G1",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "9L",
+                  "name": ""
+                },
+                {
+                  "code": "10L",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "四",
+          "matches": [
+            {
+              "id": "badminton-singles-17",
+              "matchNo": "17",
+              "code": "17/111315U1*111315U2",
+              "day": 7,
+              "slot": "G2",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "111315U1",
+                  "name": ""
+                },
+                {
+                  "code": "111315U2",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-18",
+              "matchNo": "18",
+              "code": "18/111315U3*121416U1",
+              "day": 7,
+              "slot": "G2",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "111315U3",
+                  "name": ""
+                },
+                {
+                  "code": "121416U1",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-singles-19",
+              "matchNo": "19",
+              "code": "19/121416U2*121416U3",
+              "day": 7,
+              "slot": "G2",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "121416U2",
+                  "name": ""
+                },
+                {
+                  "code": "121416U3",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tennis-female",
+      "name": "网球女单",
+      "teamEvent": false,
+      "teamMap": {},
+      "stages": [
+        {
+          "name": "一",
+          "matches": [
+            {
+              "id": "tennis-1",
+              "matchNo": "1",
+              "code": "1/AB",
+              "day": 1,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "A",
+                  "name": "高一4"
+                },
+                {
+                  "code": "B",
+                  "name": "高二VCE*1"
+                }
+              ]
+            },
+            {
+              "id": "tennis-2",
+              "matchNo": "2",
+              "code": "2/CD",
+              "day": 1,
+              "slot": "G2",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "C",
+                  "name": "高一1"
+                },
+                {
+                  "code": "D",
+                  "name": "高二1"
+                }
+              ]
+            },
+            {
+              "id": "tennis-3",
+              "matchNo": "3",
+              "code": "3/EF",
+              "day": 1,
+              "slot": "G3",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "E",
+                  "name": "高二VCE*2"
+                },
+                {
+                  "code": "F",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tennis-4",
+              "matchNo": "4",
+              "code": "4/GH",
+              "day": 1,
+              "slot": "G4",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "G",
+                  "name": "高一5*1"
+                },
+                {
+                  "code": "H",
+                  "name": "高一5*2"
+                }
+              ]
+            },
+            {
+              "id": "tennis-5",
+              "matchNo": "5",
+              "code": "5/GI",
+              "day": 1,
+              "slot": "G5",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "G",
+                  "name": "高一5*1"
+                },
+                {
+                  "code": "I",
+                  "name": "高二4"
+                }
+              ]
+            },
+            {
+              "id": "tennis-6",
+              "matchNo": "6",
+              "code": "6/HI",
+              "day": 1,
+              "slot": "G6",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "H",
+                  "name": "高一5*2"
+                },
+                {
+                  "code": "I",
+                  "name": "高二4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "二",
+          "matches": [
+            {
+              "id": "tennis-7",
+              "matchNo": "7",
+              "code": "7/1W*456U1",
+              "day": 2,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "1W",
+                  "name": ""
+                },
+                {
+                  "code": "456U1",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tennis-8",
+              "matchNo": "8",
+              "code": "8/2W3W",
+              "day": 2,
+              "slot": "G2",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "2W",
+                  "name": ""
+                },
+                {
+                  "code": "3W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tennis-9",
+              "matchNo": "9",
+              "code": "9/1L456U2",
+              "day": 2,
+              "slot": "G3",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "1L456U2",
+                  "name": ""
+                },
+                {
+                  "code": "",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tennis-10",
+              "matchNo": "10",
+              "code": "10/2L3L",
+              "day": 2,
+              "slot": "G4",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "2L",
+                  "name": ""
+                },
+                {
+                  "code": "3L",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "三",
+          "matches": [
+            {
+              "id": "tennis-11",
+              "matchNo": "11",
+              "code": "11/7L8L",
+              "day": 2,
+              "slot": "G5",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "7L",
+                  "name": ""
+                },
+                {
+                  "code": "8L",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tennis-12",
+              "matchNo": "12",
+              "code": "12/9W10W",
+              "day": 2,
+              "slot": "G6",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "9W",
+                  "name": ""
+                },
+                {
+                  "code": "10W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tennis-13",
+              "matchNo": "13",
+              "code": "13/7W8W",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "7W",
+                  "name": ""
+                },
+                {
+                  "code": "8W",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tennis-male",
+      "name": "网球男单",
+      "teamEvent": false,
+      "teamMap": {},
+      "stages": [
+        {
+          "name": "一",
+          "matches": [
+            {
+              "id": "tennis-1-2",
+              "matchNo": "1",
+              "code": "1/AB",
+              "day": 3,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "A",
+                  "name": "高一VCE*1"
+                },
+                {
+                  "code": "B",
+                  "name": "高一VCE*2"
+                }
+              ]
+            },
+            {
+              "id": "tennis-2-2",
+              "matchNo": "2",
+              "code": "2/CD",
+              "day": 3,
+              "slot": "G2",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "C",
+                  "name": "高一2"
+                },
+                {
+                  "code": "D",
+                  "name": "高一6*2"
+                }
+              ]
+            },
+            {
+              "id": "tennis-3-2",
+              "matchNo": "3",
+              "code": "3/EF",
+              "day": 3,
+              "slot": "G3",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "E",
+                  "name": "高一1"
+                },
+                {
+                  "code": "F",
+                  "name": "高一VCE"
+                }
+              ]
+            },
+            {
+              "id": "tennis-4-2",
+              "matchNo": "4",
+              "code": "4/GH",
+              "day": 3,
+              "slot": "G4",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "G",
+                  "name": "高二1"
+                },
+                {
+                  "code": "H",
+                  "name": "高二3"
+                }
+              ]
+            },
+            {
+              "id": "tennis-5-2",
+              "matchNo": "5",
+              "code": "5/IJ",
+              "day": 3,
+              "slot": "G5",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "I",
+                  "name": "高一6*1"
+                },
+                {
+                  "code": "J",
+                  "name": "高一3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "二",
+          "matches": [
+            {
+              "id": "tennis-6-2",
+              "matchNo": "6",
+              "code": "6/1W2W",
+              "day": 3,
+              "slot": "G6",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "1W",
+                  "name": ""
+                },
+                {
+                  "code": "2W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tennis-7-2",
+              "matchNo": "7",
+              "code": "7/3W4W",
+              "day": 4,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "3W",
+                  "name": ""
+                },
+                {
+                  "code": "4W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tennis-8-2",
+              "matchNo": "8",
+              "code": "8/4W5W",
+              "day": 4,
+              "slot": "G2",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "4W",
+                  "name": ""
+                },
+                {
+                  "code": "5W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tennis-9-2",
+              "matchNo": "9",
+              "code": "9/3W5W",
+              "day": 4,
+              "slot": "G3",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "3W",
+                  "name": ""
+                },
+                {
+                  "code": "5W",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "三",
+          "matches": [
+            {
+              "id": "tennis-10-2",
+              "matchNo": "10",
+              "code": "10/6W*789U1",
+              "day": 4,
+              "slot": "G4",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "6W",
+                  "name": ""
+                },
+                {
+                  "code": "789U1",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tennis-11-2",
+              "matchNo": "11",
+              "code": "11/6L*789U2",
+              "day": 4,
+              "slot": "G5",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "6L",
+                  "name": ""
+                },
+                {
+                  "code": "789U2",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tug-of-war",
+      "name": "拔河",
+      "teamEvent": true,
+      "teamMap": {
+        "A": "高二 1",
+        "B": "高二 2",
+        "C": "高二 3",
+        "D": "高二 4",
+        "E": "高二 5",
+        "F": "高二 6",
+        "A1": "高一 1",
+        "B1": "高一 2",
+        "C1": "高一 3",
+        "D1": "高一 4",
+        "E1": "高一 5",
+        "F1": "高一 6",
+        "G1": "高一 7",
+        "1": "高二 1",
+        "2": "高二 2",
+        "3": "高二 3",
+        "4": "高二 4",
+        "5": "高二 5",
+        "6": "高二 6",
+        "1g1": "高一 1",
+        "2g1": "高一 2",
+        "3g1": "高一 3",
+        "4g1": "高一 4",
+        "5g1": "高一 5",
+        "6g1": "高一 6",
+        "7g1": "高一 7"
+      },
+      "stages": [
+        {
+          "name": "高二",
+          "matches": [
+            {
+              "id": "tug-of-war-1",
+              "matchNo": "1",
+              "code": "1/AB",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "A",
+                  "name": "高二 1"
+                },
+                {
+                  "code": "B",
+                  "name": "高二 2"
+                }
+              ]
+            },
+            {
+              "id": "tug-of-war-2",
+              "matchNo": "2",
+              "code": "2/CD",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "C",
+                  "name": "高二 3"
+                },
+                {
+                  "code": "D",
+                  "name": "高二 4"
+                }
+              ]
+            },
+            {
+              "id": "tug-of-war-3",
+              "matchNo": "3",
+              "code": "3/EF",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "E",
+                  "name": "高二 5"
+                },
+                {
+                  "code": "F",
+                  "name": "高二 6"
+                }
+              ]
+            },
+            {
+              "id": "tug-of-war-1-2",
+              "matchNo": "11",
+              "code": "1/35",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "3",
+                  "name": "高二 3"
+                },
+                {
+                  "code": "5",
+                  "name": "高二 5"
+                }
+              ]
+            },
+            {
+              "id": "tug-of-war-2-2",
+              "matchNo": "12",
+              "code": "2/41",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "4",
+                  "name": "高二 4"
+                },
+                {
+                  "code": "1",
+                  "name": "高二 1"
+                }
+              ]
+            },
+            {
+              "id": "tug-of-war-3-2",
+              "matchNo": "13",
+              "code": "3/2*6",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "2",
+                  "name": "高二 2"
+                },
+                {
+                  "code": "6",
+                  "name": "高二 6"
+                }
+              ]
+            },
+            {
+              "id": "tug-of-war-5",
+              "matchNo": "5",
+              "code": "5/1W3W",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "1W",
+                  "name": ""
+                },
+                {
+                  "code": "3W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tug-of-war-6",
+              "matchNo": "6",
+              "code": "6/2W3W",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "2W",
+                  "name": ""
+                },
+                {
+                  "code": "3W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tug-of-war-7",
+              "matchNo": "7",
+              "code": "7/1W2W",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "1W",
+                  "name": ""
+                },
+                {
+                  "code": "2W",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "高一",
+          "matches": [
+            {
+              "id": "tug-of-war-1-3",
+              "matchNo": "21",
+              "code": "1/AB",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "A1",
+                  "name": "高一 1"
+                },
+                {
+                  "code": "B1",
+                  "name": "高一 2"
+                }
+              ]
+            },
+            {
+              "id": "tug-of-war-2-3",
+              "matchNo": "22",
+              "code": "2/CD",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "C1",
+                  "name": "高一 3"
+                },
+                {
+                  "code": "D1",
+                  "name": "高一 4"
+                }
+              ]
+            },
+            {
+              "id": "tug-of-war-3-3",
+              "matchNo": "23",
+              "code": "3/EF",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "E1",
+                  "name": "高一 5"
+                },
+                {
+                  "code": "F1",
+                  "name": "高一 6"
+                }
+              ]
+            },
+            {
+              "id": "tug-of-war-4",
+              "matchNo": "24",
+              "code": "4/轮空G",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "G1",
+                  "name": "高一 7"
+                },
+                {
+                  "code": "BYE",
+                  "name": "轮空"
+                }
+              ]
+            },
+            {
+              "id": "tug-of-war-1-4",
+              "matchNo": "25",
+              "code": "1/6*4",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "6g1",
+                  "name": "高一 6"
+                },
+                {
+                  "code": "4g1",
+                  "name": "高一 4"
+                }
+              ]
+            },
+            {
+              "id": "tug-of-war-2-4",
+              "matchNo": "26",
+              "code": "2/1*2",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "1g1",
+                  "name": "高一 1"
+                },
+                {
+                  "code": "2g1",
+                  "name": "高一 2"
+                }
+              ]
+            },
+            {
+              "id": "tug-of-war-3-4",
+              "matchNo": "27",
+              "code": "3/5*3",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "5g1",
+                  "name": "高一 5"
+                },
+                {
+                  "code": "3g1",
+                  "name": "高一 3"
+                }
+              ]
+            },
+            {
+              "id": "tug-of-war-5-2",
+              "matchNo": "28",
+              "code": "5/1W4W",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "1W",
+                  "name": ""
+                },
+                {
+                  "code": "4W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tug-of-war-6-2",
+              "matchNo": "29",
+              "code": "6/2W3W",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "2W",
+                  "name": ""
+                },
+                {
+                  "code": "3W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tug-of-war-7-2",
+              "matchNo": "30",
+              "code": "7/5W6W",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "5W",
+                  "name": ""
+                },
+                {
+                  "code": "6W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tug-of-war-8",
+              "matchNo": "31",
+              "code": "8/5L6L",
+              "day": 5,
+              "slot": "G1",
+              "venue": null,
+              "teams": [
+                {
+                  "code": "5L",
+                  "name": ""
+                },
+                {
+                  "code": "6L",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
