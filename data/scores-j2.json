@@ -1,0 +1,457 @@
+{
+  "meta": {
+    "updatedAt": "2026/3/22 22:21:58"
+  },
+  "matches": {
+    "table-tennis-j2-33": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "volleyball-j2-32": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-female-j2-14": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": "",
+      "winner": ""
+    },
+    "basketball-female-j2-15": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": "",
+      "winner": ""
+    },
+    "basketball-female-j2-16": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": "",
+      "winner": ""
+    },
+    "basketball-female-j2-17": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": "",
+      "winner": ""
+    },
+    "basketball-female-j2-18": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": "",
+      "winner": ""
+    },
+    "basketball-female-j2-19": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": "",
+      "winner": ""
+    },
+    "basketball-male-j2-20": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": "",
+      "winner": ""
+    },
+    "basketball-male-j2-21": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": "",
+      "winner": ""
+    },
+    "basketball-male-j2-22": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": "",
+      "winner": ""
+    },
+    "basketball-male-j2-23": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": "",
+      "winner": ""
+    },
+    "basketball-male-j2-24": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": "",
+      "winner": ""
+    },
+    "basketball-male-j2-25": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": "",
+      "winner": ""
+    },
+    "basketball-male-j2-26": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": "",
+      "winner": ""
+    },
+    "basketball-male-j2-27": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": "",
+      "winner": ""
+    },
+    "basketball-male-j2-28": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": "",
+      "winner": ""
+    },
+    "basketball-male-j2-29": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": "",
+      "winner": ""
+    },
+    "basketball-male-j2-30": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": "",
+      "winner": ""
+    },
+    "basketball-male-j2-31": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": "",
+      "winner": ""
+    },
+    "basketball-skill-j2-12": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "basketball-skill-j2-13": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-female-j2-60": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-female-j2-61": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-female-j2-62": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-female-j2-63": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-female-j2-64": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-female-j2-65": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-female-j2-66": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-female-j2-67": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-female-j2-68": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-female-j2-69": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-female-j2-70": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-female-j2-71": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-female-j2-72": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-male-j2-49": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-male-j2-50": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-male-j2-51": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-male-j2-52": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-male-j2-53": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-male-j2-54": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-male-j2-55": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-male-j2-56": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-male-j2-57": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-male-j2-58": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "tennis-male-j2-59": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-j2-34": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-j2-35": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-j2-36": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-j2-37": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-j2-38": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-j2-39": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-j2-40": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-j2-41": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-j2-42": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-j2-43": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-j2-44": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-j2-45": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-j2-46": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-j2-47": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "badminton-mixed-j2-48": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-j2-1": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-j2-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-j2-3": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-j2-4": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-j2-5": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-j2-6": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-j2-7": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-j2-8": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-j2-9": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-j2-10": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    },
+    "football-j2-11": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "scheduled",
+      "note": ""
+    }
+  }
+}

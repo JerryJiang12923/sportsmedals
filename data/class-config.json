@@ -1,0 +1,243 @@
+{
+  "defaultClass": "高一1",
+  "groups": {
+    "prep": {
+      "name": "中预",
+      "schedule": [
+        "data/schedule-prep.json"
+      ],
+      "scores": [
+        "data/scores-prep.json"
+      ]
+    },
+    "j1": {
+      "name": "初一",
+      "schedule": [
+        "data/schedule-j1.json"
+      ],
+      "scores": [
+        "data/scores-j1.json"
+      ]
+    },
+    "j2": {
+      "name": "初二",
+      "schedule": [
+        "data/schedule-j2.json"
+      ],
+      "scores": [
+        "data/scores-j2.json"
+      ]
+    },
+    "high": {
+      "name": "高中",
+      "schedule": [
+        "data/schedule-high.json"
+      ],
+      "scores": [
+        "data/scores-high.json"
+      ]
+    }
+  },
+  "classes": [
+    {
+      "key": "中预1",
+      "label": "中预 1 班",
+      "group": "prep"
+    },
+    {
+      "key": "中预2",
+      "label": "中预 2 班",
+      "group": "prep"
+    },
+    {
+      "key": "中预3",
+      "label": "中预 3 班",
+      "group": "prep"
+    },
+    {
+      "key": "中预4",
+      "label": "中预 4 班",
+      "group": "prep"
+    },
+    {
+      "key": "中预5",
+      "label": "中预 5 班",
+      "group": "prep"
+    },
+    {
+      "key": "中预6",
+      "label": "中预 6 班",
+      "group": "prep"
+    },
+    {
+      "key": "中预7",
+      "label": "中预 7 班",
+      "group": "prep"
+    },
+    {
+      "key": "中预8",
+      "label": "中预 8 班",
+      "group": "prep"
+    },
+    {
+      "key": "中预9",
+      "label": "中预 9 班",
+      "group": "prep"
+    },
+    {
+      "key": "中预10",
+      "label": "中预 10 班",
+      "group": "prep"
+    },
+    {
+      "key": "初一1",
+      "label": "初一 1 班",
+      "group": "j1"
+    },
+    {
+      "key": "初一2",
+      "label": "初一 2 班",
+      "group": "j1"
+    },
+    {
+      "key": "初一3",
+      "label": "初一 3 班",
+      "group": "j1"
+    },
+    {
+      "key": "初一4",
+      "label": "初一 4 班",
+      "group": "j1"
+    },
+    {
+      "key": "初一5",
+      "label": "初一 5 班",
+      "group": "j1"
+    },
+    {
+      "key": "初一6",
+      "label": "初一 6 班",
+      "group": "j1"
+    },
+    {
+      "key": "初一7",
+      "label": "初一 7 班",
+      "group": "j1"
+    },
+    {
+      "key": "初一8",
+      "label": "初一 8 班",
+      "group": "j1"
+    },
+    {
+      "key": "初二1",
+      "label": "初二 1 班",
+      "group": "j2"
+    },
+    {
+      "key": "初二2",
+      "label": "初二 2 班",
+      "group": "j2"
+    },
+    {
+      "key": "初二3",
+      "label": "初二 3 班",
+      "group": "j2"
+    },
+    {
+      "key": "初二4",
+      "label": "初二 4 班",
+      "group": "j2"
+    },
+    {
+      "key": "初二5",
+      "label": "初二 5 班",
+      "group": "j2"
+    },
+    {
+      "key": "初二6",
+      "label": "初二 6 班",
+      "group": "j2"
+    },
+    {
+      "key": "初二7",
+      "label": "初二 7 班",
+      "group": "j2"
+    },
+    {
+      "key": "初二8",
+      "label": "初二 8 班",
+      "group": "j2"
+    },
+    {
+      "key": "高一1",
+      "label": "高一 1 班",
+      "group": "high"
+    },
+    {
+      "key": "高一2",
+      "label": "高一 2 班",
+      "group": "high"
+    },
+    {
+      "key": "高一3",
+      "label": "高一 3 班",
+      "group": "high"
+    },
+    {
+      "key": "高一4",
+      "label": "高一 4 班",
+      "group": "high"
+    },
+    {
+      "key": "高一5",
+      "label": "高一 5 班",
+      "group": "high"
+    },
+    {
+      "key": "高一6",
+      "label": "高一 6 班",
+      "group": "high"
+    },
+    {
+      "key": "高一VCE",
+      "label": "高一 VCE",
+      "group": "high"
+    },
+    {
+      "key": "高二1",
+      "label": "高二 1 班",
+      "group": "high"
+    },
+    {
+      "key": "高二2",
+      "label": "高二 2 班",
+      "group": "high"
+    },
+    {
+      "key": "高二3",
+      "label": "高二 3 班",
+      "group": "high"
+    },
+    {
+      "key": "高二4",
+      "label": "高二 4 班",
+      "group": "high"
+    },
+    {
+      "key": "高二5",
+      "label": "高二 5 班",
+      "group": "high"
+    },
+    {
+      "key": "高二6",
+      "label": "高二 6 班",
+      "group": "high"
+    },
+    {
+      "key": "高二VCE",
+      "label": "高二 VCE",
+      "group": "high"
+    }
+  ]
+}
