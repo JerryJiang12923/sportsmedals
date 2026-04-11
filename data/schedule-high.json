@@ -8,9 +8,10 @@
       "3": "3.25",
       "4": "3.26",
       "5": "3.27",
-      "6": "3.28",
-      "7": "3.29",
-      "8": "3.30"
+      "6": "3.30",
+      "7": "3.31",
+      "8": "4.1",
+      "9": "4.2"
     },
     "timeSlots": {
       "default": {
@@ -42,7 +43,8 @@
       "badminton-mixed": {
         "G1": "17:00-17:30",
         "G2": "17:30-18:00",
-        "G3": "18:00-18:30"
+        "G3": "18:00-18:30",
+        "Ga": "14:00-14:20"
       },
       "badminton-singles": {
         "G1": "17:00-17:30",
@@ -50,12 +52,12 @@
         "G3": "18:00-18:30"
       },
       "tennis": {
-        "G1": "17:00-17:20",
-        "G2": "17:20-17:40",
-        "G3": "17:40-18:00",
-        "G4": "18:00-18:20",
-        "G5": "18:20-18:40",
-        "G6": "18:40-19:00"
+        "G1": "17:00-17:10",
+        "G2": "17:10-17:20",
+        "G3": "17:20-17:30",
+        "G4": "17:30-17:40",
+        "G5": "17:40-17:50",
+        "G6": "17:50-18:00"
       },
       "tug-of-war": {
         "G1": "17:00-17:30",
@@ -356,8 +358,8 @@
               "matchNo": "15",
               "code": "15/8L10L",
               "day": 5,
-              "slot": "",
-              "venue": "",
+              "slot": "G1",
+              "venue": "A2",
               "teams": [
                 {
                   "code": "8L",
@@ -1569,7 +1571,7 @@
     {
       "id": "badminton-mixed",
       "name": "羽毛球混双",
-      "teamEvent": false,
+      "teamEvent": true,
       "teamMap": {
         "A": "高一1组1",
         "B": "高二5",
@@ -1933,10 +1935,10 @@
             },
             {
               "id": "badminton-mixed-18-2",
-              "matchNo": "18",
-              "code": "18/13W14W",
+              "matchNo": "19",
+              "code": "19/13W14W",
               "day": 5,
-              "slot": "G2",
+              "slot": "Ga",
               "venue": "A1",
               "teams": [
                 {
@@ -1956,7 +1958,7 @@
     {
       "id": "badminton-singles-female",
       "name": "羽毛球女单",
-      "teamEvent": false,
+      "teamEvent": true,
       "teamMap": {},
       "stages": [
         {
@@ -2139,8 +2141,8 @@
               "matchNo": "10",
               "code": "10/6W789U1",
               "day": 5,
-              "slot": null,
-              "venue": null,
+              "slot":  "G1",
+              "venue":  "A1",
               "teams": [
                 {
                   "code": "6W789U1",
@@ -2157,8 +2159,8 @@
               "matchNo": "11",
               "code": "11/6L*789U2",
               "day": 5,
-              "slot": null,
-              "venue": null,
+              "slot": "G1",
+              "venue": "A2",
               "teams": [
                 {
                   "code": "6L",
@@ -2177,7 +2179,7 @@
     {
       "id": "badminton-singles-male",
       "name": "羽毛球男单",
-      "teamEvent": false,
+      "teamEvent": true,
       "teamMap": {},
       "stages": [
         {
@@ -2547,7 +2549,7 @@
     {
       "id": "tennis-male",
       "name": "网球男单",
-      "teamEvent": false,
+      "teamEvent": true,
       "teamMap": {},
       "stages": [
         {
@@ -2768,7 +2770,7 @@
     {
       "id": "tennis-female",
       "name": "网球女单",
-      "teamEvent": false,
+      "teamEvent": true,
       "teamMap": {},
       "stages": [
         {
@@ -2991,7 +2993,7 @@
               "teams": [
                 {
                   "code": "9W",
-                  "name": ""
+                  "name": "高二1"
                 },
                 {
                   "code": "10W",
@@ -3009,7 +3011,7 @@
               "teams": [
                 {
                   "code": "7W",
-                  "name": ""
+                  "name": "高一6组1"
                 },
                 {
                   "code": "8W",
@@ -3039,7 +3041,7 @@
         "g1-4": "高一 4",
         "g1-5": "高一 5",
         "g1-6": "高一 6",
-        "g1-7": "高一 7"
+        "g1-7": "高一 VCE"
       },
       "stages": [
         {
@@ -3050,7 +3052,7 @@
               "matchNo": "1",
               "code": "1/35",
               "day": 5,
-              "slot": "G1",
+              "slot": "G3",
               "teams": [
                 {
                   "code": "g2-3",
@@ -3067,7 +3069,7 @@
               "matchNo": "2",
               "code": "2/41",
               "day": 5,
-              "slot": "G1",
+              "slot": "G3",
               "teams": [
                 {
                   "code": "g2-4",
@@ -3084,7 +3086,7 @@
               "matchNo": "3",
               "code": "3/26",
               "day": 5,
-              "slot": "G1",
+              "slot": "G3",
               "teams": [
                 {
                   "code": "g2-2",
@@ -3101,7 +3103,7 @@
               "matchNo": "5",
               "code": "5/1W3W",
               "day": 5,
-              "slot": "G1",
+              "slot": "G3",
               "teams": [
                 {
                   "code": "1W",
@@ -3118,7 +3120,7 @@
               "matchNo": "6",
               "code": "6/2W3W",
               "day": 5,
-              "slot": "G1",
+              "slot": "G3",
               "teams": [
                 {
                   "code": "2W",
@@ -3135,7 +3137,7 @@
               "matchNo": "7",
               "code": "7/1W2W",
               "day": 5,
-              "slot": "G1",
+              "slot": "G3",
               "teams": [
                 {
                   "code": "1W",
@@ -3157,7 +3159,7 @@
               "matchNo": "1",
               "code": "1/64",
               "day": 5,
-              "slot": "G1",
+              "slot": "G3",
               "teams": [
                 {
                   "code": "g1-6",
@@ -3174,7 +3176,7 @@
               "matchNo": "2",
               "code": "2/12",
               "day": 5,
-              "slot": "G1",
+              "slot": "G3",
               "teams": [
                 {
                   "code": "g1-1",
@@ -3191,7 +3193,7 @@
               "matchNo": "3",
               "code": "3/53",
               "day": 5,
-              "slot": "G1",
+              "slot": "G3",
               "teams": [
                 {
                   "code": "g1-5",
@@ -3208,11 +3210,11 @@
               "matchNo": "4",
               "code": "4/轮空7",
               "day": 5,
-              "slot": "G1",
+              "slot": "G3",
               "teams": [
                 {
                   "code": "g1-7",
-                  "name": "高一 7"
+                  "name": "高一 VCE"
                 },
                 {
                   "code": "BYE",
@@ -3225,7 +3227,7 @@
               "matchNo": "5",
               "code": "5/1W4W",
               "day": 5,
-              "slot": "G1",
+              "slot": "G3",
               "teams": [
                 {
                   "code": "1W",
@@ -3242,7 +3244,7 @@
               "matchNo": "6",
               "code": "6/2W3W",
               "day": 5,
-              "slot": "G1",
+              "slot": "G3",
               "teams": [
                 {
                   "code": "2W",
@@ -3259,7 +3261,7 @@
               "matchNo": "7",
               "code": "7/5W6W",
               "day": 5,
-              "slot": "G1",
+              "slot": "G3",
               "teams": [
                 {
                   "code": "5W",
@@ -3276,7 +3278,7 @@
               "matchNo": "8",
               "code": "8/5L6L",
               "day": 5,
-              "slot": "G1",
+              "slot": "G3",
               "teams": [
                 {
                   "code": "5L",

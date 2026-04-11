@@ -1,482 +1,482 @@
 {
   "meta": {
-    "updatedAt": "2026/3/22 22:23:33"
+    "updatedAt": "2026/4/2 19:22:55"
   },
   "matches": {
     "football-1": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 0,
+      "scoreB": 3,
+      "status": "final",
+      "note": "高一VCE弃赛",
       "winner": ""
     },
     "football-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "football-3": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 1,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "football-4": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 1,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "football-5": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 0,
+      "scoreB": 0,
+      "status": "final",
+      "note": "点球0 - 1",
       "winner": ""
     },
     "football-6": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 1,
+      "scoreB": 1,
+      "status": "final",
+      "note": "点球 3 - 1",
       "winner": ""
     },
     "football-7": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 1,
+      "scoreB": 1,
+      "status": "final",
+      "note": "点球 2 - 1",
       "winner": ""
     },
     "football-8": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 2,
+      "scoreB": 1,
+      "status": "final",
+      "note": "3.25 12：30",
       "winner": ""
     },
     "football-9": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 0,
+      "scoreB": 0,
+      "status": "final",
+      "note": "点球 1 - 2",
       "winner": ""
     },
     "football-10": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
+      "note": "3.25 13：00",
       "winner": ""
     },
     "football-11": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 1,
+      "scoreB": 1,
+      "status": "final",
+      "note": "点球 3 - 2",
       "winner": ""
     },
     "football-12": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "football-13": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 3,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "football-14": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 3,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "football-15": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 2,
+      "scoreB": 2,
+      "status": "final",
+      "note": "点球 7 - 6",
       "winner": ""
     },
     "football-16": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 0,
+      "scoreB": 0,
+      "status": "final",
+      "note": "双方弃赛",
       "winner": ""
     },
     "football-18": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "basketball-1": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 12,
+      "scoreB": 5,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "basketball-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 12,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "basketball-3": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 11,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "basketball-4": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 4,
+      "scoreB": 11,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "basketball-5": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 12,
+      "scoreB": 8,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "basketball-6": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 8,
+      "scoreB": 10,
+      "status": "final",
+      "note": "加时",
       "winner": ""
     },
     "basketball-7": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 11,
+      "scoreB": 9,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "basketball-8": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 9,
+      "scoreB": 4,
+      "status": "final",
+      "note": "3.25 上午大课间",
       "winner": ""
     },
     "basketball-9": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 11,
+      "scoreB": 6,
+      "status": "final",
+      "note": "3.25 上午大课间",
       "winner": ""
     },
     "basketball-10": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 9,
+      "scoreB": 5,
+      "status": "final",
+      "note": "3.25 上午大课间",
       "winner": ""
     },
     "basketball-11": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 6,
+      "scoreB": 11,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "basketball-12": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 6,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "basketball-13": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 6,
+      "scoreB": 12,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "basketball-14": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 6,
+      "scoreB": 11,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "basketball-15": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 3,
+      "scoreB": 12,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "basketball-16": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 0,
+      "scoreB": 0,
+      "status": "final",
+      "note": "双方弃赛",
       "winner": ""
     },
     "basketball-17": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 0,
+      "scoreB": 0,
+      "status": "final",
+      "note": "双方弃赛",
       "winner": ""
     },
     "basketball-18": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 12,
+      "scoreB": 10,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "basketball-1-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 0,
+      "scoreB": 11,
+      "status": "final",
+      "note": "高二VCE弃赛记为0-11",
       "winner": ""
     },
     "basketball-2-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 6,
+      "scoreB": 12,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "basketball-3-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 8,
+      "scoreB": 6,
+      "status": "final",
+      "note": "3.25 12：30",
       "winner": ""
     },
     "basketball-4-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 6,
+      "scoreB": 7,
+      "status": "final",
+      "note": "3.25 12：30",
       "winner": ""
     },
     "basketball-5-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 8,
+      "scoreB": 1,
+      "status": "final",
+      "note": "3.25 12：30",
       "winner": ""
     },
     "basketball-6-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 11,
+      "scoreB": 0,
+      "status": "final",
+      "note": "高一VCE弃赛",
       "winner": ""
     },
     "basketball-7-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 4,
+      "scoreB": 6,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "basketball-8-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 11,
+      "scoreB": 6,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "basketball-9-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 0,
+      "scoreB": 11,
+      "status": "final",
+      "note": "高二VCE弃赛",
       "winner": ""
     },
     "basketball-10-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 0,
+      "scoreB": 11,
+      "status": "final",
+      "note": "高二2弃赛",
       "winner": ""
     },
     "basketball-11-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 4,
+      "scoreB": 2,
+      "status": "final",
+      "note": "加时",
       "winner": ""
     },
     "basketball-12-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 4,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "basketball-13-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 4,
+      "scoreB": 11,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "volleyball-1": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
+      "note": "3.25 12：30",
       "winner": ""
     },
     "volleyball-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
+      "note": "3.25 上午大课间",
       "winner": ""
     },
     "volleyball-3": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
+      "note": "3.25 12：30",
       "winner": ""
     },
     "volleyball-4": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
+      "note": "3.25 13：00",
       "winner": ""
     },
     "volleyball-5": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 1,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "volleyball-6": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 1,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "volleyball-7": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "volleyball-8": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "volleyball-8-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "volleyball-9": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "volleyball-10": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 1,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "volleyball-11": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "volleyball-12": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "volleyball-13": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 2,
+      "scoreB": 1,
+      "status": "final",
+      "note": "4.1 17:00",
       "winner": ""
     },
     "volleyball-14": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 1,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "volleyball-15": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 1,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "volleyball-16": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "volleyball-17": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
+      "note": "4.1 17:30",
       "winner": ""
     },
     "volleyball-18": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 0,
+      "scoreB": 0,
+      "status": "final",
+      "note": "双方弃赛",
       "winner": ""
     },
     "volleyball-19": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
+      "note": "4.2 17：00",
       "winner": ""
     },
     "tug-of-war-1": {
@@ -588,541 +588,541 @@
       "note": ""
     },
     "badminton-singles-1": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-3": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
+      "note": "高二5弃赛",
       "winner": ""
     },
     "badminton-singles-4": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-5": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-6": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 1,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-7": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-8": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-9": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-10": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-11": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-1-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-2-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-3-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-4-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-5-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-6-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-7-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-8-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-9-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-10-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-11-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
+      "note": "高二2 弃赛",
       "winner": ""
     },
     "badminton-singles-12": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-13": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-14": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 1,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-15": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-16": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
+      "note": "高二1 弃赛",
       "winner": ""
     },
     "badminton-singles-17": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-18": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 1,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-singles-19": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
+      "note": "高二1 弃赛",
       "winner": ""
     },
     "badminton-mixed-1": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-mixed-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-mixed-3": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
+      "note": "高二4弃赛",
       "winner": ""
     },
     "badminton-mixed-4": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-mixed-5": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-mixed-6": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-mixed-7": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-mixed-8": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-mixed-9": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-mixed-10": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-mixed-11": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-mixed-12": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-mixed-13": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-mixed-14": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-mixed-15": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 1,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-mixed-16": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-mixed-17": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 1,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-mixed-18": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "badminton-mixed-18-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tennis-1": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 0,
+      "scoreB": 0,
+      "status": "final",
+      "note": "双方迟到30分钟，视为弃赛",
       "winner": ""
     },
     "tennis-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 7,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tennis-3": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 7,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tennis-4": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 8,
+      "scoreB": 6,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tennis-5": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 2,
+      "scoreB": 7,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tennis-6": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 5,
+      "scoreB": 7,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tennis-7": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 0,
+      "scoreB": 7,
+      "status": "final",
+      "note": "自动晋级",
       "winner": ""
     },
     "tennis-8": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 7,
+      "scoreB": 5,
+      "status": "final",
+      "note": "3.25 12：30",
       "winner": ""
     },
     "tennis-9": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 0,
+      "scoreB": 7,
+      "status": "final",
+      "note": "自动晋级",
       "winner": ""
     },
     "tennis-10": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 7,
+      "scoreB": 0,
+      "status": "final",
+      "note": "高二5弃赛",
       "winner": ""
     },
     "tennis-11": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 0,
+      "scoreB": 7,
+      "status": "final",
+      "note": "自动晋级",
       "winner": ""
     },
     "tennis-12": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 9,
+      "scoreB": 7,
+      "status": "final",
+      "note": "3.25 13：10",
       "winner": ""
     },
     "tennis-13": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 4,
+      "scoreB": 7,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tennis-1-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 7,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tennis-2-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 3,
+      "scoreB": 7,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tennis-3-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 4,
+      "scoreB": 7,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tennis-4-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 8,
+      "scoreB": 6,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tennis-5-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 7,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tennis-6-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 12,
+      "scoreB": 10,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tennis-7-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 7,
+      "scoreB": 5,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tennis-8-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 4,
+      "scoreB": 7,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tennis-9-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 4,
+      "scoreB": 7,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tennis-10-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 8,
+      "scoreB": 6,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tennis-11-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 7,
+      "scoreB": 2,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "basketball-skill-m-1": {
       "scoreA": null,
       "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "status": "final",
+      "note": "4.2 17：00",
       "winner": ""
     },
     "basketball-skill-f-1": {
       "scoreA": null,
       "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "status": "final",
+      "note": "4.2 17：10",
       "winner": ""
     },
     "football-skill-1": {
       "scoreA": null,
       "scoreB": null,
-      "status": "scheduled",
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "table-tennis-1": {
       "scoreA": null,
       "scoreB": null,
-      "status": "scheduled",
+      "status": "final",
       "note": "",
       "winner": ""
     },
@@ -1139,102 +1139,103 @@
       "note": ""
     },
     "tug-war-g2-1": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tug-war-g2-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 1,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tug-war-g2-3": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 1,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tug-war-g2-5": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 1,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tug-war-g2-6": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 1,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tug-war-g2-7": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tug-war-g1-1": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tug-war-g1-2": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 1,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tug-war-g1-3": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tug-war-g1-4": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tug-war-g1-5": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tug-war-g1-6": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 0,
+      "scoreB": 1,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tug-war-g1-7": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
+      "scoreA": 1,
+      "scoreB": 0,
+      "status": "final",
       "note": "",
       "winner": ""
     },
     "tug-war-g1-8": {
-      "scoreA": null,
-      "scoreB": null,
-      "status": "scheduled",
-      "note": "",
+      "scoreA": 0,
+      "scoreB": 1,
+      "status": "final",
+      "note": "高一VCE弃赛",
       "winner": ""
     }
-  }
+  },
+  "tableTennis": {}
 }

@@ -2,11 +2,822 @@
   "meta": {
     "title": "PREP 赛程",
     "startDate": "",
-    "dayMap": {},
-    "timeSlots": {
-      "default": {}
+    "dayMap": {
+      "1": "3.23",
+      "2": "3.24",
+      "3": "3.25",
+      "4": "3.26",
+      "5": "3.27",
+      "6": "3.30",
+      "7": "3.31",
+      "8": "4.1",
+      "9": "4.2",
+      "10": "4.3"
     },
-    "updatedAt": "待体育部发布"
+    "timeSlots": {
+      "default": {
+        "G0": "9:30-10:00",
+        "G1": "17:00-17:30",
+        "G2": "17:30-18:00",
+        "G3": "18:00-18:30",
+        "G4": "18:30-19:00",
+        "G5": "19:00-19:30",
+        "G6": "19:30-20:00",
+        "G7": "20:00-20:30"
+      }
+    },
+    "updatedAt": "2026-03-31"
   },
-  "sports": []
+  "sports": [
+    {
+      "id": "football-prep",
+      "name": "足球",
+      "teamEvent": true,
+      "teamMap": {
+        "A": "中预8",
+        "B": "中预6",
+        "C": "中预1",
+        "D": "中预7",
+        "E": "中预3",
+        "F": "中预5",
+        "G": "中预2",
+        "H": "中预10",
+        "I": "中预9"
+      },
+      "stages": [
+        {
+          "name": "一",
+          "matches": [
+            {
+              "id": "football-prep-1",
+              "matchNo": "1",
+              "code": "1/AB",
+              "day": 7,
+              "slot": "G2",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "A",
+                  "name": "中预8"
+                },
+                {
+                  "code": "B",
+                  "name": "中预6"
+                }
+              ]
+            },
+            {
+              "id": "football-prep-2",
+              "matchNo": "2",
+              "code": "2/CD",
+              "day": 7,
+              "slot": "G2",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "C",
+                  "name": "中预1"
+                },
+                {
+                  "code": "D",
+                  "name": "中预7"
+                }
+              ]
+            },
+            {
+              "id": "football-prep-3",
+              "matchNo": "3",
+              "code": "3/EF",
+              "day": 7,
+              "slot": "G2",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "E",
+                  "name": "中预3"
+                },
+                {
+                  "code": "F",
+                  "name": "中预5"
+                }
+              ]
+            },
+            {
+              "id": "football-prep-4",
+              "matchNo": "4",
+              "code": "4/GH",
+              "day": 7,
+              "slot": "G2",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "G",
+                  "name": "中预2"
+                },
+                {
+                  "code": "H",
+                  "name": "中预10"
+                }
+              ]
+            },
+            {
+              "id": "football-prep-5",
+              "matchNo": "5",
+              "code": "5/HI",
+              "day": 8,
+              "slot": "G1",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "H",
+                  "name": "中预10"
+                },
+                {
+                  "code": "I",
+                  "name": "中预9"
+                }
+              ]
+            },
+            {
+              "id": "football-prep-6",
+              "matchNo": "6",
+              "code": "6/GI",
+              "day": 8,
+              "slot": "G2",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "G",
+                  "name": "中预2"
+                },
+                {
+                  "code": "I",
+                  "name": "中预9"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "二",
+          "matches": [
+            {
+              "id": "football-prep-7",
+              "matchNo": "7",
+              "code": "7/1W2W",
+              "day": 8,
+              "slot": "G2",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "1W",
+                  "name": ""
+                },
+                {
+                  "code": "2W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "football-prep-8",
+              "matchNo": "8",
+              "code": "8/3W*456U1",
+              "day": 9,
+              "slot": "G1",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "3W",
+                  "name": ""
+                },
+                {
+                  "code": "456U1",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "三",
+          "matches": [
+            {
+              "id": "football-prep-9",
+              "matchNo": "9",
+              "code": "9/7W8W",
+              "day": 9,
+              "slot": "G2",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "7W",
+                  "name": ""
+                },
+                {
+                  "code": "8W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "football-prep-10",
+              "matchNo": "10",
+              "code": "10/7L8L",
+              "day": 9,
+              "slot": "G2",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "7L",
+                  "name": ""
+                },
+                {
+                  "code": "8L",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "football-skill-prep",
+      "name": "足球技巧赛",
+      "teamEvent": false,
+      "teamMap": {},
+      "stages": [
+        {
+          "name": "一（男）",
+          "matches": [
+            {
+              "id": "football-skill-prep-1",
+              "matchNo": "技1",
+              "code": "技巧赛",
+              "day": 10,
+              "slot": "G1",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "",
+                  "name": "待定"
+                },
+                {
+                  "code": "",
+                  "name": "待定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "一（女）",
+          "matches": [
+            {
+              "id": "football-skill-prep-2",
+              "matchNo": "技2",
+              "code": "技巧赛",
+              "day": 10,
+              "slot": "G1",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "",
+                  "name": "待定"
+                },
+                {
+                  "code": "",
+                  "name": "待定"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "basketball-skill-prep",
+      "name": "篮球技巧赛",
+      "teamEvent": false,
+      "teamMap": {},
+      "stages": [
+        {
+          "name": "定点投篮",
+          "matches": [
+            {
+              "id": "basketball-skill-prep-3",
+              "matchNo": "1",
+              "code": "投篮挑战",
+              "day": 7,
+              "slot": "G1",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "",
+                  "name": ""
+                },
+                {
+                  "code": "",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "技巧赛（男）",
+          "matches": [
+            {
+              "id": "basketball-skill-prep-1",
+              "matchNo": "1",
+              "code": "技巧赛",
+              "day": 6,
+              "slot": "G1",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "",
+                  "name": ""
+                },
+                {
+                  "code": "",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "技巧赛（女）",
+          "matches": [
+            {
+              "id": "basketball-skill-prep-2",
+              "matchNo": "1",
+              "code": "技巧赛",
+              "day": 6,
+              "slot": "G2",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "",
+                  "name": ""
+                },
+                {
+                  "code": "",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "volleyball-prep",
+      "name": "垫球挑战",
+      "teamEvent": false,
+      "teamMap": {},
+      "stages": [
+        {
+          "name": "一",
+          "matches": [
+            {
+              "id": "volleyball-prep-1",
+              "matchNo": "1",
+              "code": "垫球挑战",
+              "day": 9,
+              "slot": "G1",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "",
+                  "name": ""
+                },
+                {
+                  "code": "",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "table-tennis-prep",
+      "name": "半台推挡",
+      "teamEvent": false,
+      "teamMap": {},
+      "stages": [
+        {
+          "name": "一",
+          "matches": [
+            {
+              "id": "table-tennis-prep-1",
+              "matchNo": "1",
+              "code": "半台推挡",
+              "day": 8,
+              "slot": "G2",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "",
+                  "name": ""
+                },
+                {
+                  "code": "",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "badminton-mixed-prep",
+      "name": "羽毛球混双",
+      "teamEvent": true,
+      "teamMap": {
+        "A": "中预3组2",
+        "B": "中预7组1",
+        "C": "中预6组2",
+        "D": "中预1组1",
+        "E": "中预9组1",
+        "F": "中预5组2",
+        "G": "中预2组1",
+        "H": "中预4组2",
+        "I": "中预4组1",
+        "J": "中预1组2",
+        "K": "轮空",
+        "L": "中预2组2",
+        "M": "中预7组2",
+        "N": "中预10",
+        "O": "中预3组1",
+        "P": "中预5组1",
+        "Q": "中预6组1",
+        "R": "中预9组2"
+      },
+      "stages": [
+        {
+          "name": "一",
+          "matches": [
+            {
+              "id": "badminton-mixed-prep-1",
+              "matchNo": "1",
+              "code": "1/AB",
+              "day": 7,
+              "slot": "G1",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "A",
+                  "name": "中预3组2"
+                },
+                {
+                  "code": "B",
+                  "name": "中预7组1"
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-prep-2",
+              "matchNo": "2",
+              "code": "2/CD",
+              "day": 7,
+              "slot": "G1",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "C",
+                  "name": "中预6组2"
+                },
+                {
+                  "code": "D",
+                  "name": "中预1组1"
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-prep-3",
+              "matchNo": "3",
+              "code": "3/EF",
+              "day": 7,
+              "slot": "G2",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "E",
+                  "name": "中预9组1"
+                },
+                {
+                  "code": "F",
+                  "name": "中预5组2"
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-prep-4",
+              "matchNo": "4",
+              "code": "4/GH",
+              "day": 7,
+              "slot": "G3",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "G",
+                  "name": "中预2组1"
+                },
+                {
+                  "code": "H",
+                  "name": "中预4组2"
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-prep-5",
+              "matchNo": "5",
+              "code": "5/IJ",
+              "day": 7,
+              "slot": "G3",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "I",
+                  "name": "中预4组1"
+                },
+                {
+                  "code": "J",
+                  "name": "中预1组2"
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-prep-6",
+              "matchNo": "6",
+              "code": "6/KL",
+              "day": 8,
+              "slot": "G1",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "K",
+                  "name": "轮空"
+                },
+                {
+                  "code": "L",
+                  "name": "中预2组2"
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-prep-7",
+              "matchNo": "7",
+              "code": "7/MN",
+              "day": 8,
+              "slot": "G1",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "M",
+                  "name": "中预7组2"
+                },
+                {
+                  "code": "N",
+                  "name": "中预10"
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-prep-8",
+              "matchNo": "8",
+              "code": "8/OP",
+              "day": 8,
+              "slot": "G1",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "O",
+                  "name": "中预3组1"
+                },
+                {
+                  "code": "P",
+                  "name": "中预5组1"
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-prep-9",
+              "matchNo": "9",
+              "code": "9/QR",
+              "day": 8,
+              "slot": "G2",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "Q",
+                  "name": "中预6组1"
+                },
+                {
+                  "code": "R",
+                  "name": "中预9组2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "二",
+          "matches": [
+            {
+              "id": "badminton-mixed-prep-10",
+              "matchNo": "10",
+              "code": "10/1W6W",
+              "day": 8,
+              "slot": "G2",
+              "venue": "A4",
+              "teams": [
+                {
+                  "code": "1W",
+                  "name": ""
+                },
+                {
+                  "code": "6W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-prep-11",
+              "matchNo": "11",
+              "code": "11/3W4W",
+              "day": 8,
+              "slot": "G3",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "3W",
+                  "name": ""
+                },
+                {
+                  "code": "4W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-prep-12",
+              "matchNo": "12",
+              "code": "12/2W5W",
+              "day": 8,
+              "slot": "G3",
+              "venue": "A3",
+              "teams": [
+                {
+                  "code": "2W",
+                  "name": ""
+                },
+                {
+                  "code": "5W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-prep-13",
+              "matchNo": "13",
+              "code": "13/7W8W",
+              "day": 8,
+              "slot": "G3",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "7W",
+                  "name": ""
+                },
+                {
+                  "code": "8W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-prep-14",
+              "matchNo": "14",
+              "code": "14/8W9W",
+              "day": 9,
+              "slot": "G1",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "8W",
+                  "name": ""
+                },
+                {
+                  "code": "9W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-prep-15",
+              "matchNo": "15",
+              "code": "15/7W9W",
+              "day": 9,
+              "slot": "G2",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "9W",
+                  "name": ""
+                },
+                {
+                  "code": "10W",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "三",
+          "matches": [
+            {
+              "id": "badminton-mixed-prep-16",
+              "matchNo": "16",
+              "code": "16/10W11W",
+              "day": 9,
+              "slot": "G1",
+              "venue": "A2",
+              "teams": [
+                {
+                  "code": "10W",
+                  "name": ""
+                },
+                {
+                  "code": "11W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-prep-17",
+              "matchNo": "17",
+              "code": "17/12W131415U1",
+              "day": 9,
+              "slot": "G3",
+              "venue": "A1",
+              "teams": [
+                {
+                  "code": "12W",
+                  "name": ""
+                },
+                {
+                  "code": "131415U1",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-prep-18",
+              "matchNo": "18",
+              "code": "18/16W17W",
+              "day": 10,
+              "slot": "",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "16W",
+                  "name": ""
+                },
+                {
+                  "code": "17W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "badminton-mixed-prep-19",
+              "matchNo": "19",
+              "code": "19/16L17L",
+              "day": 10,
+              "slot": "",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "16L",
+                  "name": ""
+                },
+                {
+                  "code": "17L",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

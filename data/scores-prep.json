@@ -1,6 +1,313 @@
 {
   "meta": {
-    "updatedAt": "待体育部发布"
+    "updatedAt": "2026/4/8 20:16:34"
   },
-  "matches": {}
+  "matches": {
+    "football-prep-1": {
+      "scoreA": 2,
+      "scoreB": 3,
+      "status": "final",
+      "note": "4.1 17:30",
+      "winner": ""
+    },
+    "football-prep-2": {
+      "scoreA": 4,
+      "scoreB": 0,
+      "status": "final",
+      "note": "4.1 17:30",
+      "winner": ""
+    },
+    "football-prep-3": {
+      "scoreA": 4,
+      "scoreB": 0,
+      "status": "final",
+      "note": "4.1 17:30",
+      "winner": ""
+    },
+    "football-prep-4": {
+      "scoreA": 0,
+      "scoreB": 6,
+      "status": "final",
+      "note": "4.1 17:30",
+      "winner": ""
+    },
+    "football-prep-5": {
+      "scoreA": 4,
+      "scoreB": 2,
+      "status": "final",
+      "note": "4.2 17:00",
+      "winner": ""
+    },
+    "football-prep-6": {
+      "scoreA": 4,
+      "scoreB": 2,
+      "status": "final",
+      "note": "4.2 17:30",
+      "winner": ""
+    },
+    "football-prep-7": {
+      "scoreA": 1,
+      "scoreB": 1,
+      "status": "final",
+      "note": "点球 6 - 5",
+      "winner": ""
+    },
+    "football-prep-8": {
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
+      "note": "4.7 17:00",
+      "winner": ""
+    },
+    "football-prep-9": {
+      "scoreA": 0,
+      "scoreB": 1,
+      "status": "final",
+      "note": "4.8 17:00",
+      "winner": ""
+    },
+    "football-prep-10": {
+      "scoreA": 2,
+      "scoreB": 2,
+      "status": "final",
+      "note": "点球 0 - 2",
+      "winner": ""
+    },
+    "football-skill-prep-1": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "final",
+      "note": "4.8 17:00",
+      "winner": ""
+    },
+    "football-skill-prep-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "final",
+      "note": "4.8 17:00",
+      "winner": ""
+    },
+    "basketball-skill-prep-1": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "final",
+      "note": "4.8 17:00",
+      "winner": ""
+    },
+    "basketball-skill-prep-2": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "final",
+      "note": "4.8 17:20",
+      "winner": ""
+    },
+    "basketball-skill-prep-3": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "final",
+      "note": "4.7 17:00",
+      "winner": ""
+    },
+    "volleyball-prep-1": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "final",
+      "note": "",
+      "winner": ""
+    },
+    "table-tennis-prep-1": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "final",
+      "note": "",
+      "winner": ""
+    },
+    "badminton-mixed-prep-1": {
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
+      "note": "",
+      "winner": ""
+    },
+    "badminton-mixed-prep-2": {
+      "scoreA": 2,
+      "scoreB": 1,
+      "status": "final",
+      "note": "",
+      "winner": ""
+    },
+    "badminton-mixed-prep-3": {
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
+      "note": "",
+      "winner": ""
+    },
+    "badminton-mixed-prep-4": {
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
+      "note": "",
+      "winner": ""
+    },
+    "badminton-mixed-prep-5": {
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
+      "note": "",
+      "winner": ""
+    },
+    "badminton-mixed-prep-6": {
+      "scoreA": null,
+      "scoreB": null,
+      "status": "final",
+      "note": "自动晋级",
+      "winner": ""
+    },
+    "badminton-mixed-prep-7": {
+      "scoreA": 1,
+      "scoreB": 2,
+      "status": "final",
+      "note": "",
+      "winner": ""
+    },
+    "badminton-mixed-prep-8": {
+      "scoreA": 1,
+      "scoreB": 2,
+      "status": "final",
+      "note": "",
+      "winner": ""
+    },
+    "badminton-mixed-prep-9": {
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
+      "note": "",
+      "winner": ""
+    },
+    "badminton-mixed-prep-10": {
+      "scoreA": 1,
+      "scoreB": 2,
+      "status": "final",
+      "note": "",
+      "winner": ""
+    },
+    "badminton-mixed-prep-11": {
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
+      "note": "",
+      "winner": ""
+    },
+    "badminton-mixed-prep-12": {
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
+      "note": "",
+      "winner": ""
+    },
+    "badminton-mixed-prep-13": {
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
+      "note": "中预10 弃赛",
+      "winner": ""
+    },
+    "badminton-mixed-prep-14": {
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
+      "note": "",
+      "winner": ""
+    },
+    "badminton-mixed-prep-15": {
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
+      "note": "",
+      "winner": ""
+    },
+    "badminton-mixed-prep-16": {
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
+      "note": "",
+      "winner": ""
+    },
+    "badminton-mixed-prep-17": {
+      "scoreA": 2,
+      "scoreB": 0,
+      "status": "final",
+      "note": "",
+      "winner": ""
+    },
+    "badminton-mixed-prep-18": {
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
+      "note": "4.3 13：30",
+      "winner": ""
+    },
+    "badminton-mixed-prep-19": {
+      "scoreA": 0,
+      "scoreB": 2,
+      "status": "final",
+      "note": "4.3 13：30",
+      "winner": ""
+    }
+  },
+  "tableTennis": {
+    "中预1": {
+      "pushes": 0,
+      "misses": 0
+    },
+    "中预1组1": {
+      "pushes": 180,
+      "misses": 0
+    },
+    "中预2": {
+      "pushes": 63,
+      "misses": 9
+    },
+    "中预3": {
+      "pushes": 0,
+      "misses": 0
+    },
+    "中预4": {
+      "pushes": 210,
+      "misses": 10
+    },
+    "中预5": {
+      "pushes": 0,
+      "misses": 0
+    },
+    "中预6": {
+      "pushes": 0,
+      "misses": 0
+    },
+    "中预6组1": {
+      "pushes": 249,
+      "misses": 1
+    },
+    "中预6组2": {
+      "pushes": 166,
+      "misses": 4
+    },
+    "中预7": {
+      "pushes": 0,
+      "misses": 0
+    },
+    "中预8": {
+      "pushes": 219,
+      "misses": 4
+    },
+    "中预9": {
+      "pushes": 169,
+      "misses": 8
+    },
+    "中预10": {
+      "pushes": 0,
+      "misses": 0
+    }
+  }
 }

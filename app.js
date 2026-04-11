@@ -1,27 +1,17 @@
 const defaultData = {
   meta: {
-    title: "2026 春季运动会奖牌榜",
-    subtitle: "学校春季运动会",
-    date: "2026 · 春",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg",
-    heroUrl: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1600&q=80"
+    title: "",
+    subtitle: "",
+    date: "",
+    logoUrl: "",
+    heroUrl: "",
+    announcement: ""
   },
   settings: {
     points: { gold: 3, silver: 2, bronze: 1 }
   },
-  events: [
-    { id: "e1", name: "100米短跑", category: "田径" },
-    { id: "e2", name: "4x100接力", category: "田径" },
-    { id: "e3", name: "跳远", category: "田径" }
-  ],
-  records: [
-    { eventId: "e1", grade: "七年级", className: "7-1", gold: 1, silver: 0, bronze: 0 },
-    { eventId: "e1", grade: "七年级", className: "7-2", gold: 0, silver: 1, bronze: 0 },
-    { eventId: "e2", grade: "八年级", className: "8-1", gold: 1, silver: 0, bronze: 0 },
-    { eventId: "e2", grade: "九年级", className: "9-3", gold: 0, silver: 1, bronze: 1 },
-    { eventId: "e3", grade: "七年级", className: "7-1", gold: 0, silver: 1, bronze: 1 },
-    { eventId: "e3", grade: "八年级", className: "8-2", gold: 1, silver: 0, bronze: 0 }
-  ]
+  events: [],
+  records: []
 };
 
 const state = {
@@ -32,8 +22,10 @@ const state = {
   selectedClass: "",
   selectedGroupKey: "",
   scheduleView: null,
+  scheduleToday: false,
   view: "within",
   gradeFilter: null,
+  sortMode: "points",
   admin: false,
   theme: "dark"
 };
@@ -59,6 +51,7 @@ const elements = {
   lastUpdated: document.getElementById("lastUpdated"),
   currentTime: document.getElementById("currentTime"),
   viewToggle: document.getElementById("viewToggle"),
+  sortToggle: document.getElementById("sortToggle"),
   switchTheme: document.getElementById("switchTheme"),
   exportPoster: document.getElementById("exportPoster"),
   adminPanel: document.getElementById("adminPanel"),
@@ -67,6 +60,9 @@ const elements = {
   inputDate: document.getElementById("inputDate"),
   inputLogo: document.getElementById("inputLogo"),
   inputHero: document.getElementById("inputHero"),
+  inputAnnouncement: document.getElementById("inputAnnouncement"),
+  announcementSection: document.getElementById("announcementSection"),
+  announcementContent: document.getElementById("announcementContent"),
   recordEditor: document.getElementById("recordEditor"),
   addRow: document.getElementById("addRow"),
   clearRows: document.getElementById("clearRows"),
@@ -84,7 +80,28 @@ const elements = {
   scheduleBody: document.getElementById("scheduleBody"),
   scheduleMeta: document.getElementById("scheduleMeta"),
   scheduleNote: document.getElementById("scheduleNote"),
-  scoresSportFilter: document.getElementById("scoresSportFilter")
+  scoresSportFilter: document.getElementById("scoresSportFilter"),
+toggleRecords: document.getElementById("toggleRecords"),
+  todayToggle: document.getElementById("todayToggle")
+};
+
+const showToast = (message, duration = 3000, type = "default") => {
+  const toast = document.createElement("div");
+  toast.className = `toast${type === "error" ? " error" : ""}`;
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  setTimeout(() => toast.remove(), duration);
+};
+
+const handleError = (context, error) => {
+  console.error(`[${context}]`, error);
+  showToast(`操作失败：${error.message || "未知错误"}`, 4000, "error");
+};
+
+const updateState = (updates, shouldRender = true, shouldPersist = true) => {
+  Object.assign(state, updates);
+  if (shouldRender) render();
+  if (shouldPersist) persistUiState();
 };
 
 const dataUrlFromQuery = () => {
@@ -130,6 +147,32 @@ const normalizeClassCandidate = (value) =>
     .replace(/组\d+/g, "")
     .replace(/[男女]\d*/g, "")
     .trim();
+
+const containsAsUnit = (item, target) => {
+  if (!/\d/.test(target)) {
+    return item.includes(target);
+  }
+  const idx = item.indexOf(target);
+  if (idx === -1) return false;
+  if (idx > 0 && /\d/.test(item[idx - 1])) return false;
+  const nextIdx = idx + target.length;
+  if (nextIdx < item.length && /\d/.test(item[nextIdx])) return false;
+  return true;
+};
+
+const sumDetailedMedals = (records) =>
+  records.reduce(
+    (acc, record) => {
+      acc.first += Number(record.first ?? record.gold) || 0;
+      acc.second += Number(record.second ?? record.silver) || 0;
+      acc.third += Number(record.third ?? record.bronze) || 0;
+      acc.fourth += Number(record.fourth) || 0;
+      acc.fifth += Number(record.fifth) || 0;
+      acc.sixth += Number(record.sixth) || 0;
+      return acc;
+    },
+    { first: 0, second: 0, third: 0, fourth: 0, fifth: 0, sixth: 0 }
+  );
 
 const sumMedals = (records) =>
   records.reduce(
@@ -224,11 +267,22 @@ const normalizeStageName = (name) => {
 const splitUGroupCodes = (rawCode) => {
   const text = String(rawCode || "").trim();
   if (!text) return [];
+  // 处理混合长度：SSDD格式，如"8910"→["8","9","10"]
+  if (text.length === 4) {
+    const m = text.match(/^(\d)(\d)(\d\d)$/);
+    if (m) return [m[1], m[2], m[3]];
+  }
+  // 处理混合长度：SDDD格式，如"91011"→["9","10","11"]
+  if (text.length === 5) {
+    const m = text.match(/^(\d)(\d\d)(\d\d)$/);
+    if (m) return [m[1], m[2], m[3]];
+  }
   if (text.length >= 4 && text.length % 2 === 0) {
     return text.match(/.{2}/g) || [text];
   }
   return text.split("");
 };
+
 
 const formatUPlaceholder = (code) => {
   if (!code) return "";
@@ -275,7 +329,7 @@ const handbookPoints = {
   team: { first: 12, second: 9, third: 7, fourth: 5, fifth: 4, sixth: 3 }
 };
 
-const isTeamEventByName = (name = "") => /足球|篮球|排球|拔河|团体|对抗/i.test(String(name));
+const isTeamEventByName = (name = "") => /^(?!.*技巧赛)(?:足球|篮球)|排球|乒乓|拔河|十人十一足|团体|对抗/i.test(String(name));
 
 const toNumberOrZero = (value) => {
   const num = Number(value);
@@ -303,7 +357,7 @@ const getRecordPointsByHandbook = (record, event) => {
 
 const readMatchNote = (score = {}) => {
   if (!score) return "";
-  if (score.note) return String(score.note).trim();
+  if (score.note) return String(score.note).trim().replace(/：/g, ":");
   if (score.rescheduledAt) return `改期至 ${String(score.rescheduledAt).trim()}`;
   return "";
 };
@@ -461,7 +515,7 @@ const buildRoundRobinRanking = (sport, groupCodes, matchesByNo, resultMap) => {
     if (b.wins !== a.wins) return b.wins - a.wins;
     if (b.diff !== a.diff) return b.diff - a.diff;
     if (b.scored !== a.scored) return b.scored - a.scored;
-    return a.name.localeCompare(b.name, "zh-CN");
+    return a.name.localeCompare(b.name, "zh-CN", { numeric: true });
   });
 };
 
@@ -823,6 +877,36 @@ const persistSelectedClass = (value) => {
   localStorage.setItem("medalboard_selected_class", value);
 };
 
+const persistUiState = () => {
+  try {
+    localStorage.setItem("medalboard_view", state.view || "");
+    localStorage.setItem("medalboard_sort_mode", state.sortMode || "");
+    localStorage.setItem("medalboard_schedule_view", state.scheduleView || "");
+    localStorage.setItem("medalboard_schedule_today", state.scheduleToday ? "1" : "");
+  } catch (e) { /* ignore */ }
+};
+
+const restoreUiState = () => {
+  try {
+    const savedView = localStorage.getItem("medalboard_view");
+    if (savedView === "within" || savedView === "classes") {
+      state.view = savedView;
+    }
+    const savedSortMode = localStorage.getItem("medalboard_sort_mode");
+    if (savedSortMode === "points" || savedSortMode === "total" || savedSortMode === "medals") {
+      state.sortMode = savedSortMode;
+    }
+    const savedScheduleView = localStorage.getItem("medalboard_schedule_view");
+    if (savedScheduleView) {
+      state.scheduleView = savedScheduleView;
+    }
+    const savedToday = localStorage.getItem("medalboard_schedule_today");
+    if (savedToday === "1") {
+      state.scheduleToday = true;
+    }
+  } catch (e) { /* ignore */ }
+};
+
 const mergeScheduleList = (list) => {
   const merged = {
     meta: { title: "赛程", startDate: "", dayMap: {}, timeSlots: { default: {} }, updatedAt: "" },
@@ -857,10 +941,11 @@ const mergeScheduleList = (list) => {
 };
 
 const mergeScoresList = (list) => {
-  const merged = { meta: { updatedAt: "" }, matches: {} };
+  const merged = { meta: { updatedAt: "" }, matches: {}, tableTennis: {} };
   list.forEach((item) => {
     if (item?.meta?.updatedAt) merged.meta.updatedAt = item.meta.updatedAt;
     merged.matches = { ...merged.matches, ...(item?.matches || {}) };
+    merged.tableTennis = { ...merged.tableTennis, ...(item?.tableTennis || {}) };
   });
   return merged;
 };
@@ -876,6 +961,7 @@ const loadJsonList = async (urls) => {
 
 const applyTheme = (theme) => {
   state.theme = theme === "light" ? "light" : "dark";
+  document.documentElement.classList.toggle("theme-light", state.theme === "light");
   document.body.classList.toggle("theme-light", state.theme === "light");
   if (elements.switchTheme) {
     elements.switchTheme.textContent = state.theme === "light" ? "切换暗色" : "切换亮色";
@@ -896,7 +982,7 @@ const groupBy = (items, keyGetter) => {
   }, {});
 };
 
-const buildLeaderboard = (data, view, gradeFilter) => {
+const buildLeaderboard = (data, view, gradeFilter, sortMode = "points") => {
   const eventMap = new Map((data.events || []).map((event) => [event.id, event]));
   const normalizedRecords = (data.records || []).map(normalizeRecordIdentity);
   let grouped;
@@ -909,9 +995,11 @@ const buildLeaderboard = (data, view, gradeFilter) => {
   const rows = Object.entries(grouped)
     .map(([name, records]) => {
       const medals = sumMedals(records);
+      const totalMedals = medals.gold + medals.silver + medals.bronze;
       return {
         name,
         medals,
+        totalMedals,
         points: records.reduce(
           (sum, record) => sum + getRecordPointsByHandbook(record, eventMap.get(record.eventId)),
           0
@@ -919,11 +1007,24 @@ const buildLeaderboard = (data, view, gradeFilter) => {
       };
     })
     .sort((a, b) => {
-      if (b.points !== a.points) return b.points - a.points;
-      if (b.medals.gold !== a.medals.gold) return b.medals.gold - a.medals.gold;
-      if (b.medals.silver !== a.medals.silver) return b.medals.silver - a.medals.silver;
-      if (b.medals.bronze !== a.medals.bronze) return b.medals.bronze - a.medals.bronze;
-      return a.name.localeCompare(b.name, "zh-CN");
+      if (sortMode === "points") {
+        if (b.points !== a.points) return b.points - a.points;
+        if (b.medals.gold !== a.medals.gold) return b.medals.gold - a.medals.gold;
+        if (b.medals.silver !== a.medals.silver) return b.medals.silver - a.medals.silver;
+        if (b.medals.bronze !== a.medals.bronze) return b.medals.bronze - a.medals.bronze;
+      } else if (sortMode === "total") {
+        if (b.totalMedals !== a.totalMedals) return b.totalMedals - a.totalMedals;
+        if (b.points !== a.points) return b.points - a.points;
+        if (b.medals.gold !== a.medals.gold) return b.medals.gold - a.medals.gold;
+        if (b.medals.silver !== a.medals.silver) return b.medals.silver - a.medals.silver;
+        if (b.medals.bronze !== a.medals.bronze) return b.medals.bronze - a.medals.bronze;
+      } else if (sortMode === "medals") {
+        if (b.medals.gold !== a.medals.gold) return b.medals.gold - a.medals.gold;
+        if (b.medals.silver !== a.medals.silver) return b.medals.silver - a.medals.silver;
+        if (b.medals.bronze !== a.medals.bronze) return b.medals.bronze - a.medals.bronze;
+        if (b.points !== a.points) return b.points - a.points;
+      }
+      return a.name.localeCompare(b.name, "zh-CN", { numeric: true });
     });
 
   return rows.map((row, index) => ({ ...row, rank: index + 1 }));
@@ -935,8 +1036,18 @@ const updateHero = (data) => {
   elements.heroMeta.querySelector(".hero-subtitle").textContent = formatPanguText(data.meta.subtitle);
   elements.schoolLogo.src = data.meta.logoUrl;
   elements.schoolLogo.style.display = data.meta.logoUrl ? "block" : "none";
-  elements.heroMedia.style.backgroundImage = `url('${data.meta.heroUrl}')`;
+  elements.heroMedia.style.backgroundImage = `url("${String(data.meta.heroUrl || "").replace(/"/g, "\\22")}")`;
   elements.heroPrint.src = data.meta.heroUrl;
+};
+
+const renderAnnouncement = (data) => {
+  const announcement = data.meta.announcement;
+  if (announcement !== undefined && announcement !== null && announcement !== "") {
+    elements.announcementSection.style.display = "block";
+    elements.announcementContent.textContent = "🔔 " + announcement;
+  } else {
+    elements.announcementSection.style.display = "none";
+  }
 };
 
 const renderTable = (rows) => {
@@ -965,29 +1076,101 @@ const renderTable = (rows) => {
 const render = () => {
   if (!state.data) return;
   updateHero(state.data);
+  renderAnnouncement(state.data);
   const selectedGrade = getGradeBySelectedClass();
   const gradeFilter = state.view === "within"
     ? selectedGrade || state.gradeFilter || state.data.records[0]?.grade
     : null;
   state.gradeFilter = gradeFilter;
-  const rows = buildLeaderboard(state.data, state.view, gradeFilter);
+  const rows = buildLeaderboard(state.data, state.view, gradeFilter, state.sortMode);
   renderTable(rows);
   if (state.view === "within") {
     elements.viewNote.textContent = "";
-    elements.gradeFilter.style.display = selectedGrade ? "none" : "flex";
+    if (elements.gradeFilter) elements.gradeFilter.style.display = selectedGrade ? "none" : "flex";
     if (!selectedGrade) {
-      elements.gradeSelect.value = gradeFilter || "";
+      if (elements.gradeSelect) elements.gradeSelect.value = gradeFilter || "";
     }
   } else {
     elements.viewNote.textContent = "";
-    elements.gradeFilter.style.display = "none";
+    if (elements.gradeFilter) elements.gradeFilter.style.display = "none";
   }
+  updateSortSelect();
 };
 
 const getDayLabel = (day) => {
   if (!state.schedule?.meta?.dayMap) return day ? `D${day}` : "待定";
   const label = state.schedule.meta.dayMap[String(day)];
   return label ? `${label}` : day ? `D${day}` : "待定";
+};
+
+const getTodayDayInfo = () => {
+  const now = new Date();
+  const month = now.getMonth() + 1;
+  const day = now.getDate();
+  const dateStr = `${month}.${day}`;
+  const dayMap = state.schedule?.meta?.dayMap;
+  if (!dayMap) return { dateStr, dayNumber: null };
+  const entry = Object.entries(dayMap).find(([, v]) => v === dateStr);
+  return { dateStr, dayNumber: entry ? Number(entry[0]) : null };
+};
+
+const parseRescheduledDate = (note) => {
+  const text = String(note || "").trim().replace(/：/g, ":");
+  const match = text.match(/(\d+\.\d+)/);
+  return match ? match[1] : "";
+};
+
+const getTodayMatches = () => {
+  const todayInfo = getTodayDayInfo();
+  const todayDateStr = todayInfo?.dateStr || "";
+  const todayDay = todayInfo?.dayNumber;
+  const original = [];
+  const rescheduled = [];
+  const allSports = getSortedSports();
+
+  allSports.forEach((sport) => {
+    const resultMap = buildResultMap(sport);
+    (sport.stages || []).forEach((stage) => {
+      (stage.matches || []).forEach((match) => {
+        const score = getMatchScore(match.id);
+        const status = score?.status || "scheduled";
+        const note = score?.note || "";
+        const rescheduledDate = note ? parseRescheduledDate(note) : "";
+
+        if (todayDay != null && match.day === todayDay) {
+          if (rescheduledDate && rescheduledDate !== todayDateStr) return;
+          const isPaused = status === "postponed" || status === "delayed";
+          original.push({
+            sportId: sport.id,
+            sportName: sport.name,
+            teamEvent: sport.teamEvent,
+            teamMap: sport.teamMap || {},
+            resultMap,
+            match,
+            stageName: stage.name,
+            isPaused
+          });
+          return;
+        }
+
+        if (note && rescheduledDate && rescheduledDate === todayDateStr && (todayDay == null || match.day !== todayDay)) {
+          rescheduled.push({
+            sportId: sport.id,
+            sportName: sport.name,
+            teamEvent: sport.teamEvent,
+            teamMap: sport.teamMap || {},
+            resultMap,
+            match,
+            stageName: stage.name,
+            originalDay: match.day,
+            isRescheduled: true
+          });
+        }
+      });
+    });
+  });
+
+  return [...original, ...rescheduled];
 };
 
 const parseGSlotIndexes = (slot) => {
@@ -1002,7 +1185,11 @@ const parseGSlotIndexes = (slot) => {
 
 const getSportSlotDuration = (sportId) => {
   const id = String(sportId || "");
-  if (id.includes("tennis")) return 20;
+  if (id.includes("table-tennis")) return 60;
+  if (id.includes("tennis")) return 10;
+  if (id.includes("badminton")) return 20;
+  if (id.includes("basketball-skill")) return 30;
+  if (id.includes("basketball")) return 20;
   return 30;
 };
 
@@ -1013,10 +1200,17 @@ const formatMinutes = (minutes) => {
 };
 
 const getDynamicGSlotLabel = (sportId, day, slot) => {
+  const slotText = String(slot || "").trim();
+  if (/^G0$/i.test(slotText)) {
+    const segmentMinutes = getSportSlotDuration(sportId);
+    const start = 9 * 60 + 30;
+    const end = start + segmentMinutes;
+    return `${formatMinutes(start)}-${formatMinutes(end)}`;
+  }
   const indexes = parseGSlotIndexes(slot);
   if (!indexes.length) return "";
   const dayNumber = Number(day);
-  const isLateBucket = [1, 2, 3, 4, 6, 7, 8, 9].includes(dayNumber);
+  const isLateBucket = [1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14].includes(dayNumber);
   const isNoonBucket = [5, 10].includes(dayNumber);
   if (!isLateBucket && !isNoonBucket) return "";
 
@@ -1066,7 +1260,7 @@ const isSelectedClassInMatch = (teamA, teamB, codeText) => {
   const candidates = [teamA, teamB, codeText]
     .map((item) => normalizeClassCandidate(item))
     .filter(Boolean);
-  return candidates.some((item) => item.includes(target) || target.includes(item));
+  return candidates.some((item) => containsAsUnit(item, target));
 };
 
 const buildMatchCard = (sportId, sportName, match, teamEvent, teamMap = {}, resultMap = {}, stageName = "") => {
@@ -1079,7 +1273,14 @@ const buildMatchCard = (sportId, sportName, match, teamEvent, teamMap = {}, resu
   const statusText = status === "delayed" ? "延误" : status === "postponed" ? "推迟" : status === "final" ? "已结束" : "";
   const statusClass = statusText ? ` status-${status}` : "";
   const isAlert = status === "delayed" || status === "postponed";
-  const timeLabel = formatPanguText(`${getDayLabel(match.day)} · ${getSlotLabel(sportId, match.slot, match.day)}`);
+  const rescheduledDate = note ? parseRescheduledDate(score?.note || "") : "";
+  const originalTimeLabel = formatPanguText(`${getDayLabel(match.day)} · ${getSlotLabel(sportId, match.slot, match.day)}`);
+  const oldTimeClass = rescheduledDate
+    ? `match-time-old${status === "final" ? " final" : ""}`
+    : "";
+  const timeLabel = rescheduledDate
+    ? `<s class="${oldTimeClass}">${originalTimeLabel}</s>`
+    : originalTimeLabel;
   const venueLabel = match.venue ? formatPanguText(`场地 ${match.venue}`) : "";
   const scopeKey = getMatchScopeKey(sportId, stageName);
   const participants = getMatchParticipants(match);
@@ -1092,7 +1293,9 @@ const buildMatchCard = (sportId, sportName, match, teamEvent, teamMap = {}, resu
   const isMyClass = isSelectedClassInMatch(teamA, teamB, match.code || "");
   const scoreLabel = teamEvent ? getScoreLabel(score) : "不计比分";
   const codeLabel = formatMatchCodeLabel(match.code || "");
-  const noteLabel = note ? formatPanguText(note) : (winnerNote ? formatPanguText(winnerNote) : "");
+  const noteLabel = rescheduledDate
+    ? `<span class="match-note-rescheduled">→ ${formatPanguText(note)}</span>`
+    : note ? formatPanguText(note) : (winnerNote ? formatPanguText(winnerNote) : "");
   const challengeSport = isChallengeSport(sportId, sportName);
   const nonScoreMain = challengeSport
     ? `
@@ -1146,8 +1349,139 @@ const renderScheduleTabs = () => {
     .join("");
 };
 
+const formatTtClassName = (name) => {
+  const text = String(name || "").trim();
+  const match = text.match(/^(.*?)(?:班)?\s*组\s*(\d+)$/);
+  if (match) {
+    const base = match[1].replace(/\s+/g, "").replace(/班$/, "");
+    return `${base}班组${match[2]}`;
+  }
+  return formatClassText(text);
+};
+
+const buildTableTennisStatsRows = () => {
+  const stats = state.scores?.tableTennis || {};
+  const rows = Object.entries(stats)
+    .map(([className, data]) => ({
+      className: formatTtClassName(className),
+      pushes: toNumberOrZero(data?.pushes),
+      misses: toNumberOrZero(data?.misses)
+    }))
+    .filter((row) => row.pushes > 0 || row.misses > 0)
+    .sort((a, b) => b.pushes - a.pushes || a.misses - b.misses || a.className.localeCompare(b.className, "zh-CN", { numeric: true }));
+  return rows.map((row, index) => ({ ...row, rank: index + 1 }));
+};
+
+const renderTableTennisStatsTable = (isTableTennis) => {
+  if (!isTableTennis) return "";
+  const rows = buildTableTennisStatsRows();
+  if (!rows.length) return "";
+
+  const rowsHtml = rows
+    .map((row, index) => {
+      const topClass = row.rank <= 3 ? ` top-${row.rank}` : "";
+      return `
+        <div class="table-row${topClass}" style="--i:${index}">
+          <span>${row.rank}</span>
+          <strong>${formatPanguText(row.className)}</strong>
+          <span class="stat-pushes">${row.pushes}</span>
+          <span class="stat-misses">${row.misses}</span>
+        </div>
+      `;
+    })
+    .join("");
+
+  return `
+    <div class="schedule-stage table-tennis-stats">
+      <div class="stage-title">推挡统计排行榜</div>
+      <div class="table-wrap">
+        <div class="table-head stats-head">
+          <span>排名</span>
+          <span>班级</span>
+          <span>推挡</span>
+          <span>失误</span>
+        </div>
+        <div class="table-body stats-body">
+          ${rowsHtml}
+        </div>
+      </div>
+    </div>
+  `;
+};
+
+const renderTodayScheduleBody = () => {
+  if (!elements.scheduleBody) return;
+  const todayInfo = getTodayDayInfo();
+  const matches = getTodayMatches();
+
+  if (!matches.length) {
+    const dateText = todayInfo?.dateStr ? `${todayInfo.dateStr}` : "今日";
+    elements.scheduleBody.innerHTML = `<div class="schedule-empty">今日（${dateText}）暂无赛程</div>`;
+    return;
+  }
+
+  matches.sort((a, b) => {
+    if (a.isPaused && !b.isPaused) return 1;
+    if (!a.isPaused && b.isPaused) return -1;
+    if (a.isRescheduled && !b.isRescheduled) return -1;
+    if (!a.isRescheduled && b.isRescheduled) return 1;
+    const dayA = a.isRescheduled ? (todayInfo?.dayNumber || 0) : a.match.day;
+    const dayB = b.isRescheduled ? (todayInfo?.dayNumber || 0) : b.match.day;
+    if (dayA !== dayB) return dayA - dayB;
+    return String(a.match.slot || "").localeCompare(String(b.match.slot || ""), "en", { numeric: true });
+  });
+
+  const buildCardHtml = (item) => {
+    let card = buildMatchCard(
+      item.sportId,
+      item.sportName,
+      item.match,
+      item.teamEvent,
+      item.teamMap,
+      item.resultMap,
+      item.stageName
+    );
+    if (item.isPaused) {
+      card = card.replace('class="match-card', 'class="match-card is-postponed-dim');
+    }
+    const stageName = normalizeStageName(item.stageName);
+    const sportLabel = formatPanguText(`${getSportTabLabel({ id: item.sportId, name: item.sportName })} · 阶段 ${stageName}`);
+    let tagHtml = "";
+    if (item.isRescheduled) {
+      tagHtml = '<span class="today-tag today-tag-rescheduled">改期至今</span>';
+    } else if (item.isPaused) {
+      tagHtml = '<span class="today-tag today-tag-paused">今日暂停</span>';
+    }
+    return `<div class="today-card-wrap">
+      <div class="today-sport-label"><span>${sportLabel}</span>${tagHtml}</div>
+      ${card}
+    </div>`;
+  };
+
+  const active = matches.filter((m) => !m.isPaused);
+  const paused = matches.filter((m) => m.isPaused);
+  const activeHtml = active.map(buildCardHtml).join("");
+  const pausedHtml = paused.map(buildCardHtml).join("");
+
+  let gridContent = activeHtml;
+  if (paused.length && active.length) {
+    gridContent += `<div class="today-paused-sep"></div>`;
+  }
+  gridContent += pausedHtml;
+
+  elements.scheduleBody.innerHTML = `
+    <div class="schedule-stage">
+      <div class="stage-grid today-grid">${gridContent}</div>
+    </div>
+  `;
+};
+
 const renderScheduleBody = () => {
   if (!elements.scheduleBody) return;
+  if (state.scheduleToday) {
+    renderTodayScheduleBody();
+    return;
+  }
   const targetKey = state.scheduleView;
   const sports = getSortedSports().filter((item) => getSportTabKey(item) === targetKey);
   if (!sports.length) {
@@ -1173,7 +1507,19 @@ const renderScheduleBody = () => {
     });
   });
 
+  const isTableTennis = targetKey === "tableTennis";
+  const statsTableHtml = renderTableTennisStatsTable(isTableTennis);
+  if (statsTableHtml) {
+    blocks.push(statsTableHtml);
+  }
+
   elements.scheduleBody.innerHTML = blocks.join("") || "<div class=\"schedule-empty\">暂无赛程数据</div>";
+};
+
+const handleTodayToggle = () => {
+  state.scheduleToday = !state.scheduleToday;
+  renderSchedule();
+  persistUiState();
 };
 
 const renderSchedule = () => {
@@ -1192,12 +1538,26 @@ const renderSchedule = () => {
   }
   const scoreUpdatedAt = state.scores?.meta?.updatedAt || state.schedule?.meta?.updatedAt || "--";
   elements.scheduleMeta.textContent = formatPanguText(`比分更新：${scoreUpdatedAt}`);
-  if (elements.scheduleNote) {
-    const classMeta = getSelectedClassMeta();
-    const groupName = state.classConfig?.groups?.[classMeta?.group || ""]?.name || "当前班级";
-    elements.scheduleNote.textContent = formatPanguText(`按项目查看 ${groupName} 赛程，本班参赛场次已高亮`);
+
+  if (elements.todayToggle) {
+    elements.todayToggle.textContent = state.scheduleToday ? "返回赛程" : "查看今日";
   }
-  renderScheduleTabs();
+
+  if (state.scheduleToday) {
+    if (elements.scheduleNote) {
+      const todayInfo = getTodayDayInfo();
+      const dateText = todayInfo?.dateStr ? `${todayInfo.dateStr}` : "今日";
+      elements.scheduleNote.textContent = formatPanguText(`今日赛程（${dateText}），按时间顺序排列`);
+    }
+    elements.scheduleTabs.innerHTML = "";
+  } else {
+    if (elements.scheduleNote) {
+      const classMeta = getSelectedClassMeta();
+      const groupName = state.classConfig?.groups?.[classMeta?.group || ""]?.name || "当前班级";
+      elements.scheduleNote.textContent = formatPanguText(`按项目查看 ${groupName} 赛程，本班参赛场次已高亮`);
+    }
+    renderScheduleTabs();
+  }
   renderScheduleBody();
 };
 
@@ -1232,6 +1592,24 @@ const buildScoresEditor = () => {
   if (!state.schedule || !state.scores) {
     elements.scoresEditor.innerHTML = "<div class=\"scores-empty\">暂无赛程数据</div>";
     return;
+  }
+
+  // 保存当前输入的乒乓球推挡数据
+  const currentTtRows = [...document.querySelectorAll(".tt-editor-row")];
+  if (currentTtRows.length) {
+    const ttData = {};
+    currentTtRows.forEach((row) => {
+      const rawName = row.querySelector(".tt-class-input")?.value?.trim() || "";
+      if (!rawName) return;
+      const className = sanitizeTeamLabelForDisplay(rawName);
+      const pushes = parseScoreInputValue(row.querySelector(".tt-pushes")?.value);
+      const misses = parseScoreInputValue(row.querySelector(".tt-misses")?.value);
+      ttData[className] = {
+        pushes: Number.isFinite(pushes) ? pushes : 0,
+        misses: Number.isFinite(misses) ? misses : 0
+      };
+    });
+    state.scores.tableTennis = { ...state.scores.tableTennis, ...ttData };
   }
 
   const rows = [];
@@ -1315,7 +1693,74 @@ const buildScoresEditor = () => {
       <div class="scores-col">${col2.join("")}</div>
       <div class="scores-col">${col3.join("")}</div>
     </div>
+    ${buildTableTennisRows()}
   `;
+};
+
+const buildTableTennisRows = () => {
+  const filterSportId = getSelectedScoreSportFilter();
+  const hasTableTennis = filterSportId === "all"
+    ? (state.schedule?.sports || []).some((sport) => sport.id?.includes("table-tennis"))
+    : filterSportId.includes("table-tennis");
+  if (!hasTableTennis) return "";
+
+  const tableTennisStats = state.scores?.tableTennis || {};
+  const currentGroup = state.selectedGroupKey || getSelectedClassMeta()?.group || "";
+  const classes = state.classConfig?.classes || [];
+  const classNames = classes
+    .filter((item) => !currentGroup || item.group === currentGroup)
+    .map((item) => item.key)
+    .sort((a, b) => a.localeCompare(b, "zh-CN", { numeric: true }));
+
+  // 合并配置班级和已录入的自定义班级
+  const allClasses = new Set([...classNames, ...Object.keys(tableTennisStats)]);
+  const sortedClasses = [...allClasses].sort((a, b) => a.localeCompare(b, "zh-CN", { numeric: true }));
+
+  const rowHtml = (className, isCustom = false) => {
+    const stats = tableTennisStats[className] || {};
+    const pushes = toNumberOrZero(stats.pushes);
+    const misses = toNumberOrZero(stats.misses);
+    return `
+      <div class="tt-editor-row${isCustom ? " tt-custom" : ""}" data-class="${className}">
+        <input class="tt-input tt-class-input" type="text" value="${className}" ${isCustom ? "" : "readonly"} placeholder="班级名" />
+        <label>推挡
+          <input class="tt-input tt-pushes" type="number" min="0" placeholder="0" value="${pushes || ""}" />
+        </label>
+        <label>失误
+          <input class="tt-input tt-misses" type="number" min="0" placeholder="0" value="${misses || ""}" />
+        </label>
+        <button class="btn ghost tt-remove" title="删除">×</button>
+      </div>
+    `;
+  };
+
+  return `
+    <div class="tt-editor-block">
+      <div class="tt-editor-title">推挡统计</div>
+      <div class="tt-editor-grid">
+        ${sortedClasses.map((cls) => rowHtml(cls)).join("")}
+      </div>
+      <button class="btn light tt-add-class" type="button">添加班级</button>
+    </div>
+  `;
+};
+
+const getTableTennisEditorData = () => {
+  const rows = [...document.querySelectorAll(".tt-editor-row")];
+  if (!rows.length) return state.scores?.tableTennis || {};
+  const tableTennis = {};
+  rows.forEach((row) => {
+    const rawName = row.querySelector(".tt-class-input")?.value?.trim() || "";
+    if (!rawName) return;
+    const className = sanitizeTeamLabelForDisplay(rawName);
+    const pushes = parseScoreInputValue(row.querySelector(".tt-pushes")?.value);
+    const misses = parseScoreInputValue(row.querySelector(".tt-misses")?.value);
+    tableTennis[className] = {
+      pushes: Number.isFinite(pushes) ? pushes : 0,
+      misses: Number.isFinite(misses) ? misses : 0
+    };
+  });
+  return tableTennis;
 };
 
 const getScoresEditorData = () => {
@@ -1341,9 +1786,11 @@ const getScoresEditorData = () => {
       winner: winnerValue
     };
   });
+  const tableTennis = getTableTennisEditorData();
   return {
     meta: { updatedAt: new Date().toLocaleString("zh-CN") },
-    matches
+    matches,
+    tableTennis
   };
 };
 
@@ -1412,6 +1859,17 @@ const handleViewToggle = (event) => {
   }
   updateViewButtons();
   render();
+  persistUiState();
+};
+
+const updateSortSelect = () => {
+  if (elements.sortToggle) {
+    elements.sortToggle.value = state.sortMode;
+  }
+};
+
+const handleSortChange = (event) => {
+  updateState({ sortMode: event.target.value });
 };
 
 const handleSwitchTheme = (event) => {
@@ -1424,7 +1882,7 @@ const handleSwitchTheme = (event) => {
 
 const buildPosterRowsHtml = () => {
   const gradeFilter = state.view === "within" ? state.gradeFilter || state.data.records[0]?.grade : null;
-  const rows = buildLeaderboard(state.data, state.view, gradeFilter);
+  const rows = buildLeaderboard(state.data, state.view, gradeFilter, state.sortMode);
   return rows
     .map((row) => {
       const topClass = row.rank <= 3 ? ` top-${row.rank}` : "";
@@ -1554,13 +2012,13 @@ const loadData = async () => {
     state.data = await response.json();
     state.data.records = (state.data.records || []).map(normalizeRecordIdentity);
   } catch (error) {
+    handleError("loadData", error);
     state.data = defaultData;
     state.data.records = (state.data.records || []).map(normalizeRecordIdentity);
   }
   state.data.meta.logoUrl = "data/icon.jfif";
   state.data.meta.heroUrl = "data/hero.jpg";
   updateTimeBar();
-  render();
 };
 
 const loadSchedule = async () => {
@@ -1575,6 +2033,7 @@ const loadSchedule = async () => {
     const scheduleList = await loadJsonList(loadScheduleUrls);
     state.schedule = mergeScheduleList(scheduleList);
   } catch (error) {
+    handleError("loadSchedule", error);
     state.schedule = null;
   }
 
@@ -1582,6 +2041,7 @@ const loadSchedule = async () => {
     const scoresList = await loadJsonList(loadScoresUrls);
     state.scores = mergeScoresList(scoresList);
   } catch (error) {
+    handleError("loadScores", error);
     state.scores = { meta: {}, matches: {} };
   }
 };
@@ -1592,6 +2052,7 @@ const loadClassConfig = async () => {
     if (!response.ok) throw new Error("Failed to fetch class config");
     state.classConfig = await response.json();
   } catch (error) {
+    handleError("loadClassConfig", error);
     state.classConfig = { classes: [], groups: {}, defaultClass: "" };
   }
 };
@@ -1600,13 +2061,16 @@ const renderClassSelect = () => {
   if (!elements.classSelect) return;
   const classes = state.classConfig?.classes || [];
   if (!classes.length) {
-    elements.classPicker.style.display = "none";
+    elements.classPicker.hidden = true;
     return;
   }
-  elements.classPicker.style.display = "inline-flex";
   elements.classSelect.innerHTML = classes
     .map((item) => `<option value="${item.key}">${item.label}</option>`)
     .join("");
+  const preferred = state.selectedClass || classes[0]?.key || "";
+  elements.classSelect.value = preferred;
+  if (!state.selectedClass && preferred) state.selectedClass = preferred;
+  elements.classPicker.hidden = false;
 };
 
 const getGroupUrlsByClassKey = (classKey) => {
@@ -1648,6 +2112,7 @@ const applyClassSelection = async (classKey) => {
     const scheduleList = await loadJsonList(urls.schedule);
     state.schedule = mergeScheduleList(scheduleList);
   } catch (error) {
+    handleError("applyClassSelection.schedule", error);
     state.schedule = null;
   }
 
@@ -1655,10 +2120,12 @@ const applyClassSelection = async (classKey) => {
     const scoresList = await loadJsonList(urls.scores);
     state.scores = mergeScoresList(scoresList);
   } catch (error) {
+    handleError("applyClassSelection.scores", error);
     state.scores = { meta: {}, matches: {} };
   }
 
   state.scheduleView = null;
+  state.scheduleToday = false;
   ensureScheduleView();
   if (state.admin) {
     renderScoresSportFilter();
@@ -1699,6 +2166,7 @@ const persistGrade = (grade) => {
 
 const renderGradeSelect = () => {
   const grades = [...new Set((state.data.records || []).map((record) => normalizeRecordIdentity(record).grade))];
+  if (!elements.gradeSelect) return;
   elements.gradeSelect.innerHTML = grades
     .map((grade) => `<option value="${grade}">${formatPanguText(normalizeGradeText(grade))}</option>`)
     .join("");
@@ -1729,32 +2197,54 @@ const showDetailModal = (name) => {
   const eventMap = new Map(state.data.events.map((event) => [event.id, event]));
   const lines = Object.entries(grouped)
     .map(([eventId, group]) => {
-      const medals = sumMedals(group);
+      const medals = sumDetailedMedals(group);
       const event = eventMap.get(eventId);
+      const points = group.reduce((sum, r) => sum + getRecordPointsByHandbook(r, event), 0);
       return {
         name: formatPanguText(event?.name || "未知项目"),
         category: formatPanguText(event?.category || "赛事"),
-        medals
+        medals,
+        points
       };
     })
     .sort((a, b) => {
-      if (b.medals.gold !== a.medals.gold) return b.medals.gold - a.medals.gold;
-      if (b.medals.silver !== a.medals.silver) return b.medals.silver - a.medals.silver;
-      return b.medals.bronze - a.medals.bronze;
+      if (b.medals.first !== a.medals.first) return b.medals.first - a.medals.first;
+      if (b.medals.second !== a.medals.second) return b.medals.second - a.medals.second;
+      if (b.medals.third !== a.medals.third) return b.medals.third - a.medals.third;
+      if (b.points !== a.points) return b.points - a.points;
+      if (b.medals.fourth !== a.medals.fourth) return b.medals.fourth - a.medals.fourth;
+      if (b.medals.fifth !== a.medals.fifth) return b.medals.fifth - a.medals.fifth;
+      return b.medals.sixth - a.medals.sixth;
     });
 
   elements.detailTitle.textContent = formatLeaderboardName(name, state.view);
   elements.detailSubtitle.textContent = "项目奖牌明细";
   elements.detailBody.innerHTML = lines.length
     ? lines
-        .map(
-          (line) => `
-        <div class="modal-row">
-          <span>${line.name} · ${line.category}</span>
-          <span>金 ${line.medals.gold} 银 ${line.medals.silver} 铜 ${line.medals.bronze}</span>
+        .map((line) => {
+          const labels = [];
+          const push = (count, text, cls) => {
+            for (let i = 0; i < count; i++) {
+              labels.push(`<span class="medal-tag ${cls}">${text}</span>`);
+            }
+          };
+          push(line.medals.first, "金牌", "gold");
+          push(line.medals.second, "银牌", "silver");
+          push(line.medals.third, "铜牌", "bronze");
+          push(line.medals.fourth, "第四名", "rank");
+          push(line.medals.fifth, "第五名", "rank");
+          push(line.medals.sixth, "第六名", "rank");
+
+          return `
+        <div class="modal-row detail-item">
+          <div class="detail-info">
+            <span class="detail-name">${line.name}</span>
+            <span class="detail-cat">${line.category} · ${line.points} 积分</span>
+          </div>
+          <div class="detail-medals">${labels.join("")}</div>
         </div>
-      `
-        )
+      `;
+        })
         .join("")
     : '<div class="modal-row">暂无项目记录</div>';
   elements.detailModal.classList.add("active");
@@ -1782,22 +2272,32 @@ const getEventCatalog = () => {
   return { events };
 };
 
-const buildSelectOptions = (items, selectedValue) =>
-  (items.length ? items : ["未配置"])
+const buildSelectOptions = (items, selectedValue, appendCustom = false) => {
+  const options = (items.length ? items : ["未配置"])
     .map((item) => `<option value="${item}" ${item === selectedValue ? "selected" : ""}>${item}</option>`)
     .join("");
+  if (appendCustom) {
+    return options + `<option value="__custom__" ${selectedValue === "__custom__" ? "selected" : ""}>自定义...</option>`;
+  }
+  return options;
+};
 
 const syncEditorRowByCategory = (row, preferredEvent = "") => {
   const eventSelect = row.querySelector(".event-name");
   const catalog = getEventCatalog();
   const events = catalog.events.map((event) => event.name);
+  const isCustom = preferredEvent === "__custom__";
   const fallback = preferredEvent && events.includes(preferredEvent) ? preferredEvent : events[0] || "";
-  eventSelect.innerHTML = buildSelectOptions(events, fallback);
+  eventSelect.innerHTML = buildSelectOptions(events, isCustom ? "__custom__" : fallback, true);
 };
 
 const syncEditorRowByEvent = (row) => {
   const eventSelect = row.querySelector(".event-name");
+  const customInput = row.querySelector(".event-custom-input");
   const selectedEvent = eventSelect?.value || "";
+  if (customInput) {
+    customInput.style.display = selectedEvent === "__custom__" ? "block" : "none";
+  }
   syncEditorRowByCategory(row, selectedEvent);
 };
 
@@ -1813,9 +2313,9 @@ const syncEditorRowGrade = (row) => {
 const addEditorRow = (record = {}) => {
   const catalog = getEventCatalog();
   const initialEvents = catalog.events.map((event) => event.name);
-  const initialEvent = record.eventName && initialEvents.includes(record.eventName)
-    ? record.eventName
-    : initialEvents[0] || "";
+  const isExistingEvent = record.eventName && initialEvents.includes(record.eventName);
+  const initialEvent = isExistingEvent ? record.eventName : (record.eventName ? "__custom__" : initialEvents[0] || "");
+  const customValue = !isExistingEvent && record.eventName ? record.eventName : "";
   const first = Number(record.first ?? record.gold ?? 0);
   const second = Number(record.second ?? record.silver ?? 0);
   const third = Number(record.third ?? record.bronze ?? 0);
@@ -1826,7 +2326,10 @@ const addEditorRow = (record = {}) => {
   const row = document.createElement("div");
   row.className = "table-editor-row";
   row.innerHTML = `
-    <select class="event-name">${buildSelectOptions(initialEvents, initialEvent)}</select>
+    <div class="event-cell">
+      <select class="event-name">${buildSelectOptions(initialEvents, initialEvent, true)}</select>
+      <input class="event-custom-input" type="text" placeholder="输入赛事名称" value="${customValue}" style="${initialEvent === "__custom__" ? "" : "display:none;"}">
+    </div>
     <input class="input-grade" placeholder="年级(自动)" value="${record.grade || ""}" readonly>
     <input class="input-class" placeholder="班级" value="${record.className || ""}">
     <input placeholder="一" type="number" min="0" value="${Number.isFinite(first) ? first : 0}">
@@ -1847,19 +2350,23 @@ const addEditorRow = (record = {}) => {
 const getEditorData = () => {
   const rows = [...elements.recordEditor.querySelectorAll(".table-editor-row")];
   return rows.map((row) => {
-    const eventName = row.querySelector(".event-name")?.value?.trim() || "";
+    const eventSelectValue = row.querySelector(".event-name")?.value?.trim() || "";
+    const customEventInput = row.querySelector(".event-custom-input");
+    const eventName = eventSelectValue === "__custom__"
+      ? (customEventInput?.value?.trim() || "")
+      : eventSelectValue;
     const category = getEventCatalog().events.find((event) => event.name === eventName)?.category || "";
     const grade = row.querySelector(".input-grade")?.value?.trim() || "";
     const classNameInput = row.querySelector(".input-class")?.value?.trim() || "";
-    const inputs = row.querySelectorAll("input");
+    const medalInputs = row.querySelectorAll("input[type=number]");
     const className = formatClassText(classNameInput);
     const inferredGrade = inferGradeFromClassName(className);
-    const first = Number(inputs[2]?.value || 0);
-    const second = Number(inputs[3]?.value || 0);
-    const third = Number(inputs[4]?.value || 0);
-    const fourth = Number(inputs[5]?.value || 0);
-    const fifth = Number(inputs[6]?.value || 0);
-    const sixth = Number(inputs[7]?.value || 0);
+    const first = Number(medalInputs[0]?.value || 0);
+    const second = Number(medalInputs[1]?.value || 0);
+    const third = Number(medalInputs[2]?.value || 0);
+    const fourth = Number(medalInputs[3]?.value || 0);
+    const fifth = Number(medalInputs[4]?.value || 0);
+    const sixth = Number(medalInputs[5]?.value || 0);
     return {
       eventName,
       category,
@@ -2005,6 +2512,7 @@ const buildDataFromEditor = () => {
       date: elements.inputDate.value.trim() || baseMeta.date,
       logoUrl: elements.inputLogo.value.trim() || baseMeta.logoUrl,
       heroUrl: elements.inputHero.value.trim() || baseMeta.heroUrl,
+      announcement: elements.inputAnnouncement.value.trim(),
       updatedAt: new Date().toLocaleString("zh-CN")
     },
     settings: state.data?.settings || defaultData.settings,
@@ -2025,7 +2533,7 @@ const exportFile = (content, filename, type) => {
 const handleExportJson = () => {
   const data = buildDataFromEditor();
   exportFile(JSON.stringify(data, null, 2), "medals.json", "application/json");
-  elements.exportTip.textContent = "已导出 medals.json，请上传到七牛云并覆盖原文件。";
+  elements.exportTip.textContent = "已导出 medals.json。";
 };
 
 const handleExportCsv = () => {
@@ -2047,14 +2555,14 @@ const handleExportCsv = () => {
       .map((value) => csvEscape(value))
       .join(",")
   );
-  const csv = [header.join(","), ...lines].join("\n");
+  const csv = "\ufeff" + [header.join(","), ...lines].join("\n");
   exportFile(csv, "medals.csv", "text/csv;charset=utf-8");
   elements.exportTip.textContent = `已导出 medals.csv（${rows.length} 行）。`;
 };
 
 const handleExportGuide = () => {
   elements.exportTip.textContent =
-    "上传说明：登录七牛云控制台 -> 对象存储 -> 你的空间 -> 覆盖上传 medals.json。发布后全校同步。";
+    "上传说明：将 medals.json 上传到数据源服务器并覆盖原文件。发布后全校同步。";
 };
 
 const handleCsvImport = (event) => {
@@ -2091,6 +2599,7 @@ const initAdmin = () => {
   elements.inputDate.value = state.data.meta.date;
   elements.inputLogo.value = state.data.meta.logoUrl;
   elements.inputHero.value = state.data.meta.heroUrl;
+  elements.inputAnnouncement.value = state.data.meta.announcement || "";
   elements.recordEditor.innerHTML = "";
   state.data.records.forEach((record) => {
     const event = state.data.events.find((item) => item.id === record.eventId);
@@ -2111,22 +2620,110 @@ const initAdmin = () => {
   buildScoresEditor();
 };
 
+const handleScoresEditorClick = (event) => {
+  const addBtn = event.target.closest(".tt-add-class");
+  if (addBtn) {
+    const grid = addBtn.previousElementSibling;
+    const newRow = document.createElement("div");
+    newRow.className = "tt-editor-row tt-custom";
+    newRow.innerHTML = `
+      <input class="tt-input tt-class-input" type="text" value="" placeholder="如：初一1组2" />
+      <label>推挡
+        <input class="tt-input tt-pushes" type="number" min="0" placeholder="0" />
+      </label>
+      <label>失误
+        <input class="tt-input tt-misses" type="number" min="0" placeholder="0" />
+      </label>
+      <button class="btn ghost tt-remove" title="删除">×</button>
+    `;
+    grid.appendChild(newRow);
+    newRow.querySelector(".tt-class-input").focus();
+    return;
+  }
+
+  const removeBtn = event.target.closest(".tt-remove");
+  if (removeBtn) {
+    removeBtn.closest(".tt-editor-row")?.remove();
+    return;
+  }
+};
+
+const handleScheduleTabsClick = (event) => {
+  const button = event.target.closest(".schedule-tab");
+  if (!button) return;
+  state.scheduleView = button.dataset.sport;
+  state.scheduleToday = false;
+  renderSchedule();
+  persistUiState();
+};
+
+const handleDetailModalClick = (event) => {
+  if (event.target === elements.detailModal) closeDetailModal();
+};
+
+const handleAddRowClick = () => {
+  addEditorRow();
+  elements.recordEditor.classList.remove("collapsed");
+  if (elements.toggleRecords) elements.toggleRecords.textContent = "收起";
+};
+
+const handleToggleRecordsClick = () => {
+  const collapsed = elements.recordEditor.classList.toggle("collapsed");
+  elements.toggleRecords.textContent = collapsed ? "展开" : "收起";
+};
+
+const handleClearRowsClick = () => {
+  elements.recordEditor.innerHTML = "";
+};
+
+const handleCloseAdminClick = () => {
+  elements.adminPanel.classList.remove("active");
+};
+
+const bindEvents = () => {
+  elements.viewToggle.addEventListener("click", handleViewToggle);
+  elements.sortToggle?.addEventListener("change", handleSortChange);
+  elements.switchTheme?.addEventListener("click", handleSwitchTheme);
+  elements.exportPoster.addEventListener("click", handlePosterExport);
+  elements.addRow.addEventListener("click", handleAddRowClick);
+  elements.clearRows.addEventListener("click", handleClearRowsClick);
+  elements.toggleRecords?.addEventListener("click", handleToggleRecordsClick);
+  elements.exportJson.addEventListener("click", handleExportJson);
+  elements.exportCsv.addEventListener("click", handleExportCsv);
+  elements.exportGuide.addEventListener("click", handleExportGuide);
+  elements.csvInput.addEventListener("change", handleCsvImport);
+  elements.exportScores?.addEventListener("click", handleExportScores);
+  elements.scoresSportFilter?.addEventListener("change", () => buildScoresEditor());
+  elements.scoresEditor?.addEventListener("input", handleScoresEditorInput);
+  elements.scoresEditor?.addEventListener("change", handleScoresEditorChange);
+  elements.scoresEditor?.addEventListener("click", handleScoresEditorClick);
+  elements.closeAdmin.addEventListener("click", handleCloseAdminClick);
+  elements.tableBody.addEventListener("click", handleRowClick);
+  elements.closeDetail.addEventListener("click", closeDetailModal);
+  elements.detailModal.addEventListener("click", handleDetailModalClick);
+  elements.gradeSelect?.addEventListener("change", handleGradeChange);
+  elements.classSelect?.addEventListener("change", handleClassChange);
+  elements.scheduleTabs?.addEventListener("click", handleScheduleTabsClick);
+  elements.todayToggle?.addEventListener("click", handleTodayToggle);
+  window.addEventListener("resize", updateViewButtons);
+};
+
 const init = async () => {
   state.admin = isAdminMode();
   initTheme();
   await loadClassConfig();
-  renderClassSelect();
-  await loadData();
-  await loadSchedule();
   const classOptions = state.classConfig?.classes || [];
   const savedClass = localStorage.getItem("medalboard_selected_class");
   const preferred = [savedClass, state.classConfig?.defaultClass, classOptions[0]?.key]
     .find((item) => item && classOptions.some((entry) => normalizeClassKey(entry.key) === normalizeClassKey(item)));
+  if (preferred) state.selectedClass = preferred;
+  renderClassSelect();
+  await loadData();
+  await loadSchedule();
   if (preferred) {
-    state.selectedClass = preferred;
-    elements.classSelect.value = preferred;
     await applyClassSelection(preferred);
   }
+  restoreUiState();
   setDefaultGrade();
   renderGradeSelect();
   updateViewButtons();
@@ -2135,34 +2732,7 @@ const init = async () => {
   renderSchedule();
   updateTimeBar();
   setInterval(updateTimeBar, 1000 * 30);
+  bindEvents();
 };
-
-elements.viewToggle.addEventListener("click", handleViewToggle);
-elements.switchTheme?.addEventListener("click", handleSwitchTheme);
-elements.exportPoster.addEventListener("click", handlePosterExport);
-elements.addRow.addEventListener("click", () => addEditorRow());
-elements.clearRows.addEventListener("click", () => (elements.recordEditor.innerHTML = ""));
-elements.exportJson.addEventListener("click", handleExportJson);
-elements.exportCsv.addEventListener("click", handleExportCsv);
-elements.exportGuide.addEventListener("click", handleExportGuide);
-elements.csvInput.addEventListener("change", handleCsvImport);
-elements.exportScores?.addEventListener("click", handleExportScores);
-elements.scoresSportFilter?.addEventListener("change", () => buildScoresEditor());
-elements.scoresEditor?.addEventListener("input", handleScoresEditorInput);
-elements.scoresEditor?.addEventListener("change", handleScoresEditorChange);
-elements.closeAdmin.addEventListener("click", () => elements.adminPanel.classList.remove("active"));
-elements.tableBody.addEventListener("click", handleRowClick);
-elements.closeDetail.addEventListener("click", closeDetailModal);
-elements.detailModal.addEventListener("click", (event) => {
-  if (event.target === elements.detailModal) closeDetailModal();
-});
-elements.gradeSelect.addEventListener("change", handleGradeChange);
-elements.classSelect?.addEventListener("change", handleClassChange);
-elements.scheduleTabs?.addEventListener("click", (event) => {
-  const button = event.target.closest(".schedule-tab");
-  if (!button) return;
-  state.scheduleView = button.dataset.sport;
-  renderSchedule();
-});
 
 init();

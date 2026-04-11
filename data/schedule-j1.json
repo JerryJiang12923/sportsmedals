@@ -16,6 +16,7 @@
     },
     "timeSlots": {
       "default": {
+        "G0": "9:30-10:00",
         "G1": "17:00-17:30",
         "D5_G1": "13:30-14:00",
         "D10_G1": "13:30-14:00",
@@ -39,7 +40,7 @@
         "D10_G7": "16:30-17:00"
       }
     },
-    "updatedAt": ""
+    "updatedAt": "2026-03-31"
   },
   "sports": [
     {
@@ -66,6 +67,60 @@
                 {
                   "code": "",
                   "name": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "football-skill",
+      "name": "足球技巧赛",
+      "teamEvent": false,
+      "teamMap": {},
+      "stages": [
+        {
+          "name": "一（男）",
+          "matches": [
+            {
+              "id": "football-skill-1",
+              "matchNo": "技1",
+              "code": "技巧赛",
+              "day": 7,
+              "slot": "G2",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "",
+                  "name": "待定"
+                },
+                {
+                  "code": "",
+                  "name": "待定"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "一（女）",
+          "matches": [
+            {
+              "id": "football-skill-1",
+              "matchNo": "技2",
+              "code": "技巧赛",
+              "day": 7,
+              "slot": "G2",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "",
+                  "name": "待定"
+                },
+                {
+                  "code": "",
+                  "name": "待定"
                 }
               ]
             }
@@ -111,7 +166,30 @@
       "teamMap": {},
       "stages": [
         {
-          "name": "一（男）",
+          "name": "定点投篮",
+          "matches": [
+            {
+              "id": "basketball-skill-j1-14",
+              "matchNo": "1",
+              "code": "投篮挑战",
+              "day": 7,
+              "slot": "G1",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "",
+                  "name": ""
+                },
+                {
+                  "code": "",
+                  "name": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "技巧赛（男）",
           "matches": [
             {
               "id": "basketball-skill-j1-12",
@@ -134,7 +212,7 @@
           ]
         },
         {
-          "name": "一（女）",
+          "name": "技巧赛（女）",
           "matches": [
             {
               "id": "basketball-skill-j1-13",
@@ -155,36 +233,13 @@
               ]
             }
           ]
-        },
-        {
-          "name": "一",
-          "matches": [
-            {
-              "id": "basketball-skill-j1-14",
-              "matchNo": "1",
-              "code": "投篮挑战",
-              "day": 7,
-              "slot": "G1",
-              "venue": "",
-              "teams": [
-                {
-                  "code": "",
-                  "name": ""
-                },
-                {
-                  "code": "",
-                  "name": ""
-                }
-              ]
-            }
-          ]
         }
       ]
     },
     {
       "id": "tennis-female-j1",
       "name": "网球女单",
-      "teamEvent": false,
+      "teamEvent": true,
       "teamMap": {
         "A": "初一5",
         "B": "初一7",
@@ -224,7 +279,7 @@
               "matchNo": "2",
               "code": "2/CD",
               "day": 5,
-              "slot": "",
+              "slot": "G0",
               "venue": "",
               "teams": [
                 {
@@ -242,7 +297,7 @@
               "matchNo": "3",
               "code": "3/EF",
               "day": 5,
-              "slot": "",
+              "slot": "G0",
               "venue": "",
               "teams": [
                 {
@@ -416,7 +471,7 @@
     {
       "id": "tennis-male-j1",
       "name": "网球男单",
-      "teamEvent": false,
+      "teamEvent": true,
       "teamMap": {
         "A": "初一4 组1",
         "B": "初一2 组2",
@@ -587,7 +642,7 @@
             {
               "id": "tennis-male-j1-43",
               "matchNo": "9",
-              "code": "9/3W4W",
+              "code": "9/3W5W",
               "day": 7,
               "slot": "G3",
               "venue": "",
@@ -597,7 +652,7 @@
                   "name": ""
                 },
                 {
-                  "code": "4W",
+                  "code": "5W",
                   "name": ""
                 }
               ]
@@ -610,17 +665,17 @@
             {
               "id": "tennis-male-j1-44",
               "matchNo": "10",
-              "code": "10/5th6th",
+              "code": "10/7W8W",
               "day": 7,
               "slot": "G4",
               "venue": "",
               "teams": [
                 {
-                  "code": "",
+                  "code": "7W",
                   "name": ""
                 },
                 {
-                  "code": "",
+                  "code": "8W",
                   "name": ""
                 }
               ]
@@ -628,17 +683,89 @@
             {
               "id": "tennis-male-j1-45",
               "matchNo": "11",
-              "code": "11/1st2nd",
+              "code": "11/8W9W",
               "day": 7,
               "slot": "G5",
               "venue": "",
               "teams": [
                 {
-                  "code": "",
+                  "code": "8W",
                   "name": ""
                 },
                 {
-                  "code": "",
+                  "code": "9W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tennis-male-j1-46",
+              "matchNo": "12",
+              "code": "12/7W9W",
+              "day": 7,
+              "slot": "G6",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "7W",
+                  "name": ""
+                },
+                {
+                  "code": "9W",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tennis-male-j1-47",
+              "matchNo": "13",
+              "code": "13/7L8L",
+              "day": 8,
+              "slot": "G1",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "7L",
+                  "name": ""
+                },
+                {
+                  "code": "8L",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tennis-male-j1-48",
+              "matchNo": "14",
+              "code": "14/8L9L",
+              "day": 8,
+              "slot": "G2",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "8L",
+                  "name": ""
+                },
+                {
+                  "code": "9L",
+                  "name": ""
+                }
+              ]
+            },
+            {
+              "id": "tennis-male-j1-49",
+              "matchNo": "15",
+              "code": "15/7L9L",
+              "day": 8,
+              "slot": "G3",
+              "venue": "",
+              "teams": [
+                {
+                  "code": "7L",
+                  "name": ""
+                },
+                {
+                  "code": "9L",
                   "name": ""
                 }
               ]
@@ -650,7 +777,7 @@
     {
       "id": "badminton-mixed-j1",
       "name": "羽毛球混双",
-      "teamEvent": false,
+      "teamEvent": true,
       "teamMap": {
         "A": "初一2 组1",
         "B": "初一4 组2",
@@ -866,7 +993,7 @@
               "matchNo": "11",
               "code": "11/7W10W",
               "day": 5,
-              "slot": "",
+              "slot": "G0",
               "venue": "A1",
               "teams": [
                 {
@@ -884,7 +1011,7 @@
               "matchNo": "12",
               "code": "12/8W9W",
               "day": 5,
-              "slot": "",
+              "slot": "G0",
               "venue": "A2",
               "teams": [
                 {
@@ -902,7 +1029,7 @@
               "matchNo": "13",
               "code": "13/8L9L",
               "day": 5,
-              "slot": "",
+              "slot": "G0",
               "venue": "A3",
               "teams": [
                 {
@@ -997,7 +1124,7 @@
               "matchNo": "18",
               "code": "18/11W12W",
               "day": 10,
-              "slot": "",
+              "slot": "G1",
               "venue": "",
               "teams": [
                 {
