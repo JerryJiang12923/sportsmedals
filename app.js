@@ -1533,9 +1533,7 @@ const renderSchedule = () => {
     elements.scheduleBody.innerHTML = '<div class="schedule-empty">暂无赛程数据</div>';
     return;
   }
-  if (!state.scheduleView) {
-    state.scheduleView = getScheduleTabs()[0]?.key || null;
-  }
+  ensureScheduleView();
   const scoreUpdatedAt = state.scores?.meta?.updatedAt || state.schedule?.meta?.updatedAt || "--";
   elements.scheduleMeta.textContent = formatPanguText(`比分更新：${scoreUpdatedAt}`);
 
