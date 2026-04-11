@@ -25,9 +25,29 @@
 
 ### 普通展示
 
-1. 直接打开 `index.html`
-2. 默认读取 `data/medals.json`
-3. 若使用自定义数据源，访问：
+本项目依赖 `fetch` 读取本地 JSON，不能直接双击 `index.html` 打开（会触发浏览器跨源限制）。
+
+1. 先在项目目录启动本地静态服务器
+2. 通过 `http://localhost:端口` 访问页面
+3. 默认读取 `data/medals.json`
+
+常用启动方式：
+
+```bash
+# Python
+python -m http.server 8000
+
+# Node.js
+npx serve .
+```
+
+然后访问：
+
+```text
+http://localhost:8000
+```
+
+自定义数据源示例：
 
 ```text
 /?data=https://你的域名/medals.json
